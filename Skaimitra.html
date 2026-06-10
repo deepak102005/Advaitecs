@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkaiMitra — Next-Gen AI Learning Platform</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        :root {
+            --navy: #0A1628;
+            --blue-deep: #1A2E5A;
+            --blue-mid: #1E40AF;
+            --blue-accent: #2563EB;
+            --blue-bright: #3B82F6;
+            --blue-light: #DBEAFE;
+            --gold: #F59E0B;
+            --gold-light: #FEF3C7;
+            --bg-page: #F4F6FA;
+            --bg-section: #EEF1F7;
+            --bg-white: #FFFFFF;
+            --text-dark: #0A1628;
+            --text-mid: #1E3A5F;
+            --text-muted: #6B7A99;
+            --text-light: #94A3B8;
+            --border: #D1D9E6;
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 22px;
+            --radius-xl: 32px;
+            --shadow-sm: 0 2px 8px rgba(10, 22, 40, 0.07);
+            --shadow-md: 0 8px 32px rgba(10, 22, 40, 0.10);
+            --shadow-lg: 0 20px 60px rgba(10, 22, 40, 0.13);
+            --shadow-blue: 0 8px 32px rgba(37, 99, 235, 0.18);
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-page);
+            color: var(--text-dark);
+            overflow-x: hidden;
+            line-height: 1.6
+        }
+
+        /* ─── NAV LOGO (for footer) ─── */
+        .nav-logo-text {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--navy);
+            letter-spacing: -.3px
+        }
+
+        .nav-logo-text span {
+            color: var(--blue-accent)
+        }
+
+        /* ─── HERO ─── */
+        .hero {
+            min-height: calc(100vh - 120px);
+            background: linear-gradient(160deg, #F0F4FF 0%, #EEF1F7 40%, #F8F9FC 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 5% 60px;
+            position: relative;
+            overflow: hidden
+        }
+
+        .hero-bg-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: .15;
+            pointer-events: none
+        }
+
+        .hero-bg-blob.b1 {
+            width: 600px;
+            height: 600px;
+            background: var(--blue-accent);
+            top: -150px;
+            right: -100px
+        }
+
+        .hero-bg-blob.b2 {
+            width: 400px;
+            height: 400px;
+            background: var(--gold);
+            bottom: -100px;
+            left: -80px
+        }
+
+        .hero-bg-blob.b3 {
+            width: 300px;
+            height: 300px;
+            background: #7C3AED;
+            top: 40%;
+            left: 30%;
+            opacity: .07
+        }
+
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: 24px 40px;
+            align-items: start
+        }
+
+        .hero-text-main {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .hero-pills-row {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(37, 99, 235, 0.1);
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            border-radius: 50px;
+            padding: .4rem 1rem;
+            font-size: .8rem;
+            font-weight: 600;
+            color: var(--blue-accent);
+            margin-bottom: 1.5rem;
+            animation: fadeSlideUp .6s ease both
+        }
+
+        .hero-badge span {
+            width: 7px;
+            height: 7px;
+            background: var(--blue-accent);
+            border-radius: 50%;
+            animation: pulse 1.8s ease infinite
+        }
+
+        .hero-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(2.2rem, 4vw, 3.4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -.04em;
+            color: var(--navy);
+            margin-bottom: 1.25rem;
+            animation: fadeSlideUp .6s .1s ease both
+        }
+
+        .hero-title em {
+            font-style: normal;
+            color: var(--blue-accent)
+        }
+
+        .hero-sub {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            max-width: 520px;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+            animation: fadeSlideUp .6s .2s ease both
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+            animation: fadeSlideUp .6s .3s ease both
+        }
+
+        .btn-primary {
+            background: var(--blue-accent);
+            color: #fff;
+            padding: .85rem 2rem;
+            border-radius: var(--radius-sm);
+            font-size: .95rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all .2s;
+            box-shadow: var(--shadow-blue);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .btn-primary:hover {
+            background: var(--blue-mid);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 36px rgba(37, 99, 235, 0.3)
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--blue-accent);
+            padding: .85rem 2rem;
+            border-radius: var(--radius-sm);
+            font-size: .95rem;
+            font-weight: 600;
+            text-decoration: none;
+            border: 1.5px solid var(--blue-accent);
+            transition: all .2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .btn-secondary:hover {
+            background: var(--blue-light);
+            transform: translateY(-2px)
+        }
+
+        .hero-pills {
+            display: flex;
+            gap: .75rem;
+            flex-wrap: wrap;
+            animation: fadeSlideUp .6s .4s ease both
+        }
+
+        .hero-pill {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            padding: .4rem 1rem;
+            font-size: .8rem;
+            font-weight: 500;
+            color: var(--text-mid);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: var(--shadow-sm)
+        }
+
+        .hero-pill-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--blue-accent)
+        }
+
+        /* Hero visual with poster image */
+        .hero-visual {
+            position: relative;
+            grid-column: 2;
+            grid-row: 1;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            animation: fadeSlideUp .6s .2s ease both
+        }
+
+        .hero-poster-img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: var(--radius-lg);
+            filter: drop-shadow(0 15px 35px rgba(10, 22, 40, 0.12));
+        }
+
+        .ag-container {
+            position: relative;
+            width: 200%;
+            height: 200%
+        }
+
+        .ag-card {
+            position: absolute;
+            background: #fff;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border);
+            padding: 1.2rem 1.4rem;
+            transition: transform .3s ease, box-shadow .3s ease;
+            cursor: default
+        }
+
+        .ag-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px) scale(1.02) !important
+        }
+
+        .ag-card.main {
+            width: 300px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            background: linear-gradient(135deg, #1E40AF, #2563EB);
+            color: #fff;
+            border: none;
+            padding: 1.5rem
+        }
+
+        .ag-card.main .card-label {
+            font-size: .75rem;
+            font-weight: 600;
+            opacity: .7;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+            margin-bottom: .5rem
+        }
+
+        .ag-card.main .card-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: .4rem
+        }
+
+        .ag-card.main .card-sub {
+            font-size: .8rem;
+            opacity: .75
+        }
+
+        .ag-card.main .status-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #4ADE80;
+            border-radius: 50%;
+            margin-right: 6px;
+            animation: pulse 1.5s infinite
+        }
+
+        .ag-card.c1 {
+            width: 180px;
+            top: 8%;
+            left: 5%;
+            animation: float1 5.5s ease-in-out infinite
+        }
+
+        .ag-card.c2 {
+            width: 190px;
+            top: 5%;
+            right: 0%;
+            animation: float2 6.2s ease-in-out infinite
+        }
+
+        .ag-card.c3 {
+            width: 170px;
+            bottom: 12%;
+            left: 2%;
+            animation: float3 5.8s ease-in-out infinite
+        }
+
+        .ag-card.c4 {
+            width: 200px;
+            bottom: 5%;
+            right: 2%;
+            animation: float4 6.5s ease-in-out infinite
+        }
+
+        .ag-card.c5 {
+            width: 160px;
+            top: 40%;
+            left: -2%;
+            animation: float1 7s 1s ease-in-out infinite
+        }
+
+        .ag-card.c6 {
+            width: 175px;
+            top: 38%;
+            right: 0%;
+            animation: float2 6.8s .5s ease-in-out infinite
+        }
+
+        .card-icon {
+            font-size: 1.4rem;
+            margin-bottom: .5rem
+        }
+
+        .card-label-sm {
+            font-size: .7rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            margin-bottom: .25rem
+        }
+
+        .card-value {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--navy)
+        }
+
+        .card-sub-sm {
+            font-size: .75rem;
+            color: var(--text-muted);
+            margin-top: .2rem
+        }
+
+        .card-progress {
+            margin-top: .6rem;
+            height: 5px;
+            background: var(--bg-section);
+            border-radius: 3px;
+            overflow: hidden
+        }
+
+        .card-progress-bar {
+            height: 100%;
+            background: var(--blue-accent);
+            border-radius: 3px;
+            width: 72%;
+            animation: growBar 2s 1s ease both
+        }
+
+        .tag {
+            display: inline-block;
+            padding: .2rem .6rem;
+            border-radius: 50px;
+            font-size: .7rem;
+            font-weight: 600
+        }
+
+        .tag-blue {
+            background: var(--blue-light);
+            color: var(--blue-mid)
+        }
+
+        .tag-green {
+            background: #DCFCE7;
+            color: #166534
+        }
+
+        .tag-gold {
+            background: var(--gold-light);
+            color: #92400E
+        }
+
+        /* ─── SECTION COMMONS ─── */
+        .section {
+            padding: 90px 5%
+        }
+
+        .section-inner {
+            max-width: 1200px;
+            margin: 0 auto
+        }
+
+        .section-eyebrow {
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--blue-accent);
+            margin-bottom: 1rem
+        }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -.03em;
+            color: var(--navy);
+            margin-bottom: 1rem
+        }
+
+        .section-sub {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            line-height: 1.7
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem
+        }
+
+        .section-header .section-sub {
+            margin: 0 auto
+        }
+
+        /* ─── FEATURES SECTION (image-match layout) ─── */
+        .features-section {
+            background: var(--bg-section);
+            padding: 90px 5%
+        }
+
+        .features-tabs {
+            display: flex;
+            gap: 0;
+            border-bottom: 1.5px solid var(--border);
+            margin-bottom: 0;
+            overflow-x: auto;
+            scrollbar-width: none
+        }
+
+        .features-tabs::-webkit-scrollbar {
+            display: none
+        }
+
+        .ftab {
+            padding: .85rem 1.5rem;
+            font-size: .9rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            cursor: pointer;
+            border-bottom: 2.5px solid transparent;
+            margin-bottom: -1.5px;
+            white-space: nowrap;
+            transition: color .2s, border-color .2s;
+            background: none;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            font-family: inherit
+        }
+
+        .ftab:hover {
+            color: var(--text-mid)
+        }
+
+        .ftab.active {
+            color: var(--navy);
+            font-weight: 600;
+            border-bottom-color: var(--blue-accent)
+        }
+
+        .features-content {
+            margin-top: 0
+        }
+
+        .feature-panel {
+            display: none;
+            animation: fadeIn .4s ease
+        }
+
+        .feature-panel.active {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            padding: 56px 0 40px
+        }
+
+        .feature-img {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            background: linear-gradient(135deg, #EEF2FF, #E0E7FF);
+            min-height: 340px;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .feature-display-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .feature-img-inner {
+            padding: 2.5rem;
+            width: 100%;
+            text-align: center
+        }
+
+        .feat-visual-card {
+            background: #fff;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            max-width: 300px;
+            margin: 0 auto;
+            text-align: left
+        }
+
+        .feat-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: rgba(37, 99, 235, 0.08);
+            border-radius: 50px;
+            padding: .35rem .9rem;
+            font-size: .75rem;
+            font-weight: 600;
+            color: var(--blue-accent);
+            margin-bottom: 1rem
+        }
+
+        .feat-status-dot {
+            width: 7px;
+            height: 7px;
+            background: #22C55E;
+            border-radius: 50%;
+            animation: pulse 1.5s infinite
+        }
+
+        .feature-copy {
+            padding-right: 1rem
+        }
+
+        .feature-copy h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--blue-accent);
+            margin-bottom: .5rem;
+            text-transform: uppercase;
+            letter-spacing: .04em;
+            font-size: .8rem
+        }
+
+        .feature-copy h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+            font-weight: 800;
+            color: var(--navy);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            letter-spacing: -.02em
+        }
+
+        .feature-copy p {
+            font-size: .95rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+            margin-bottom: 1.5rem
+        }
+
+        .feature-bullets {
+            list-style: none;
+            margin-bottom: 1.75rem
+        }
+
+        .feature-bullets li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: .9rem;
+            color: var(--text-mid);
+            margin-bottom: .7rem;
+            line-height: 1.5
+        }
+
+        .feature-bullets li::before {
+            content: '';
+            flex-shrink: 0;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--blue-accent);
+            margin-top: .45rem
+        }
+
+        .feature-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: .9rem;
+            font-weight: 600;
+            color: var(--blue-accent);
+            text-decoration: none;
+            transition: gap .2s, color .2s
+        }
+
+        .feature-link:hover {
+            gap: 12px;
+            color: var(--blue-mid)
+        }
+
+        .feature-link svg {
+            transition: transform .2s
+        }
+
+        .feature-link:hover svg {
+            transform: translateX(3px)
+        }
+
+        /* Arrow toggle: default = navy when active, blue-accent otherwise */
+        .feature-link.active-tab-link {
+            color: var(--navy)
+        }
+
+        /* ─── HOW IT WORKS ─── */
+        .hiw-section {
+            background: var(--bg-white);
+            padding: 90px 5%
+        }
+
+        .hiw-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3.5rem
+        }
+
+        .hiw-step {
+            position: relative;
+            padding: 2rem;
+            background: var(--bg-page);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            transition: transform .3s, box-shadow .3s;
+            cursor: default
+        }
+
+        .hiw-step:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md)
+        }
+
+        .hiw-step.active-step,
+        .hiw-step:nth-child(even) {
+            background: linear-gradient(135deg, #1E40AF, #2563EB);
+            border: none
+        }
+
+        .hiw-step.active-step *,
+        .hiw-step:nth-child(even) * {
+            color: #fff !important
+        }
+
+        .hiw-step.active-step .step-num,
+        .hiw-step:nth-child(even) .step-num {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff !important
+        }
+
+        .hiw-connector {
+            display: none
+        }
+
+        .step-num {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: var(--blue-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .9rem;
+            font-weight: 800;
+            color: var(--blue-accent);
+            margin-bottom: 1.2rem
+        }
+
+        .hiw-step h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: .6rem
+        }
+
+        .hiw-step p {
+            font-size: .875rem;
+            color: var(--text-muted);
+            line-height: 1.6
+        }
+
+        /* ─── FOOTER ─── */
+        footer {
+            background: var(--navy);
+            color: #fff;
+            padding: 80px 5% 40px
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1.5fr;
+            gap: 4rem;
+            margin-bottom: 4rem
+        }
+
+        .footer-brand .nav-logo-text {
+            color: #fff;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: block
+        }
+
+        .footer-brand .nav-logo-text span {
+            color: var(--blue-bright)
+        }
+
+        .footer-brand p {
+            font-size: .875rem;
+            color: rgba(255, 255, 255, 0.55);
+            line-height: 1.7;
+            margin-bottom: 1.5rem
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: .8rem;
+            font-size: .85rem;
+            color: rgba(255, 255, 255, 0.65)
+        }
+
+        .footer-contact-item svg {
+            flex-shrink: 0;
+            margin-top: 2px;
+            opacity: .7
+        }
+
+        .footer-col h5 {
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 1.2rem
+        }
+
+        .footer-col ul {
+            list-style: none
+        }
+
+        .footer-col ul li {
+            margin-bottom: .65rem
+        }
+
+        .footer-col ul li a {
+            font-size: .875rem;
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color .2s
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff
+        }
+
+        .footer-form-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: .5rem
+        }
+
+        .footer-form-sub {
+            font-size: .8rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 1.25rem
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: .75rem;
+            margin-bottom: .75rem
+        }
+
+        .form-field {
+            display: flex;
+            flex-direction: column;
+            gap: .35rem
+        }
+
+        .form-field.full {
+            grid-column: 1/-1
+        }
+
+        .form-field label {
+            font-size: .75rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.55);
+            letter-spacing: .03em
+        }
+
+        .form-field input,
+        .form-field textarea {
+            background: rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: var(--radius-sm);
+            padding: .65rem .9rem;
+            font-size: .85rem;
+            color: #fff;
+            font-family: inherit;
+            transition: border .2s, background .2s;
+            outline: none
+        }
+
+        .form-field input::placeholder,
+        .form-field textarea::placeholder {
+            color: rgba(255, 255, 255, 0.25)
+        }
+
+        .form-field input:focus,
+        .form-field textarea:focus {
+            border-color: var(--blue-bright);
+            background: rgba(255, 255, 255, 0.1)
+        }
+
+        .form-field textarea {
+            resize: vertical;
+            min-height: 80px
+        }
+
+        .form-consent {
+            font-size: .75rem;
+            color: rgba(255, 255, 255, 0.4);
+            line-height: 1.5;
+            margin: .75rem 0;
+            display: flex;
+            gap: 8px;
+            align-items: flex-start
+        }
+
+        .form-consent input[type=checkbox] {
+            flex-shrink: 0;
+            margin-top: 2px;
+            accent-color: var(--blue-bright)
+        }
+
+        .form-submit {
+            background: var(--blue-accent);
+            color: #fff;
+            padding: .75rem 2rem;
+            border-radius: var(--radius-sm);
+            font-size: .9rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: background .2s, transform .15s;
+            font-family: inherit;
+            width: 100%
+        }
+
+        .form-submit:hover {
+            background: var(--blue-mid);
+            transform: translateY(-1px)
+        }
+
+        .footer-divider {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin-bottom: 1.5rem
+        }
+
+        .footer-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: .8rem;
+            color: rgba(255, 255, 255, 0.35)
+        }
+
+        .footer-bottom a {
+            color: rgba(255, 255, 255, 0.4);
+            text-decoration: none
+        }
+
+        .footer-bottom a:hover {
+            color: #fff
+        }
+
+        /* ─── ANIMATIONS ─── */
+        @keyframes float1 {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(-1deg)
+            }
+
+            50% {
+                transform: translateY(-18px) rotate(1deg)
+            }
+        }
+
+        @keyframes float2 {
+
+            0%,
+            100% {
+                transform: translateY(-8px) rotate(1deg)
+            }
+
+            50% {
+                transform: translateY(12px) rotate(-1deg)
+            }
+        }
+
+        @keyframes float3 {
+
+            0%,
+            100% {
+                transform: translateY(5px) rotate(.5deg)
+            }
+
+            50% {
+                transform: translateY(-14px) rotate(-1.5deg)
+            }
+        }
+
+        @keyframes float4 {
+
+            0%,
+            100% {
+                transform: translateY(-5px) rotate(-1.5deg)
+            }
+
+            50% {
+                transform: translateY(16px) rotate(1deg)
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1)
+            }
+
+            50% {
+                opacity: .6;
+                transform: scale(1.2)
+            }
+        }
+
+        @keyframes fadeSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes growBar {
+            from {
+                width: 0
+            }
+
+            to {
+                width: 72%
+            }
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        /* Scroll reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity .6s ease, transform .6s ease
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        .reveal-delay-1 {
+            transition-delay: .1s
+        }
+
+        .reveal-delay-2 {
+            transition-delay: .2s
+        }
+
+        .reveal-delay-3 {
+            transition-delay: .3s
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media(max-width:900px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 30px
+            }
+
+            .hero-text-main {
+                grid-column: auto;
+                grid-row: auto;
+            }
+
+            .hero-visual {
+                grid-column: auto;
+                grid-row: auto;
+                height: auto;
+            }
+
+            .hero-pills-row {
+                grid-column: auto;
+                grid-row: auto;
+            }
+
+            .feature-panel.active {
+                grid-template-columns: 1fr
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr 1fr
+            }
+
+            .hiw-steps {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        @media(max-width:600px) {
+            .footer-top {
+                grid-template-columns: 1fr
+            }
+
+            .hiw-steps {
+                grid-template-columns: 1fr
+            }
+
+            .hero-btns {
+                flex-direction: column
+            }
+
+            .form-row {
+                grid-template-columns: 1fr
+            }
+
+            .ftab {
+                padding: .75rem 1rem;
+                font-size: .82rem
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER / NAV -->
+    <header class="main-header">
+        <!-- MOBILE OVERLAY -->
+        <div class="mobile-overlay" id="mobileOverlay"></div>
+
+        <nav class="navbar">
+            <!-- LOGO -->
+            <div class="logo">
+                <a href="index.html"><img src="images/Adv_MainLogo_V5.png" alt="Advaitecs Logo"></a>
+            </div>
+
+            <div class="nav-right">
+                <!-- Desktop Contact -->
+                <div class="contact-number">+91 96039 92299</div>
+
+                <!-- Hamburger -->
+                <div class="hamburger" id="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+
+                <!-- MAIN MENU -->
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Home</a></li>
+
+                    <!-- DESKTOP DROPDOWN ONLY -->
+                    <li class="dropdown desktop-only">
+                        <a href="#">Programs ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="programs/ai-training.html">AI Training</a></li>
+                            <li><a href="programs/cloud-technologies.html">Cloud Technologies</a></li>
+                            <li><a href="programs/cyber-security.html">Cyber Security</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- MOBILE MENU TRIGGER -->
+                    <li class="mobile-parent mobile-only" data-menu="programs">Programs ▾</li>
+
+                    <!-- DESKTOP DROPDOWN -->
+                    <li class="dropdown desktop-only">
+                        <a href="#">Workshops ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="workshops/schools.html">Schools</a></li>
+                            <li><a href="workshops/professional.html">Professional</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- MOBILE MENU TRIGGER -->
+                    <li class="mobile-parent mobile-only" data-menu="workshops">Workshops ▾</li>
+
+                    <li><a href="career.html">Careers</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- RIGHT SIDE MOBILE SUBMENU -->
+        <div id="subMenu" class="sub-menu-panel mobile-only">
+            <div class="sub-menu-back" id="subMenuBack">← Back</div>
+            <h3 id="subMenuTitle"></h3>
+            <ul id="subMenuList"></ul>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-bg-blob b1"></div>
+        <div class="hero-bg-blob b2"></div>
+        <div class="hero-bg-blob b3"></div>
+        <div class="hero-inner">
+            <div class="hero-text-main">
+                <div class="hero-badge">
+                    <span></span>
+                    Next-Gen AI Learning Platform
+                </div>
+                <h1 class="hero-title">Future-Ready AI Learning for <em>Skill Development</em></h1>
+                <p class="hero-sub">Empower your future with SkaiMitra's intelligent learning ecosystem. Experience
+                    personalised education powered by advanced artificial intelligence to master tomorrow's skills
+                    today.</p>
+                <div class="hero-btns">
+                    <a href="#features" class="btn-primary">
+                        Explore Platform
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <a href="#how-it-works" class="btn-secondary">
+                        How It Works
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="assets/poster.png" alt="SkaiMitra AI Learning Platform" class="hero-poster-img" />
+            </div>
+            <div class="hero-pills-row">
+                <div class="hero-pills">
+                    <div class="hero-pill"><span class="hero-pill-dot"></span>AI Powered</div>
+                    <div class="hero-pill"><span class="hero-pill-dot"></span>Smart Learning</div>
+                    <div class="hero-pill"><span class="hero-pill-dot"></span>Career Focused</div>
+                    <div class="hero-pill"><span class="hero-pill-dot"></span>Personalised Education</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features-section" id="features">
+        <div class="section-inner">
+            <div class="section-header reveal">
+                <div class="section-eyebrow">Features</div>
+                <h2 class="section-title">Powerful Features for Future-Ready Learning</h2>
+                <p class="section-sub">Every feature is designed to create a smarter, more engaging, and personalised
+                    learning experience powered by artificial intelligence.</p>
+            </div>
+
+            <!-- Tabs: match the screenshot style exactly -->
+            <div class="features-tabs" role="tablist">
+                <button class="ftab active" role="tab" onclick="switchTab(this,'t1')">AI Assistant</button>
+                <button class="ftab" role="tab" onclick="switchTab(this,'t2')">Smart Assessments</button>
+                <button class="ftab" role="tab" onclick="switchTab(this,'t3')">Learn &amp; Practice</button>
+                <button class="ftab" role="tab" onclick="switchTab(this,'t4')">Learning Plan</button>
+                <button class="ftab" role="tab" onclick="switchTab(this,'t5')">Grow Your Skills</button>
+                <button class="ftab" role="tab" onclick="switchTab(this,'t6')">Reports &amp; Analytics</button>
+                <button class="ftab" role="tab" onclick="switchTab(this,'t7')">Resources</button>
+            </div>
+            <div class="features-content">
+
+                <!-- Panel 1 -->
+                <div class="feature-panel active" id="t1" role="tabpanel">
+                    <div class="feature-img reveal">
+                        <img src="assets/Ai Assistant.png" alt="AI Assistant" class="feature-display-img" />
+                    </div>
+                    <div class="feature-copy reveal reveal-delay-1">
+                        <h3>Feature 01</h3>
+                        <h2>24/7 Intelligent Assistance Tailored to You</h2>
+                        <p>Get instant support whenever you need it. Our intelligent AI assistant understands your
+                            learning needs, answers questions in real time, and provides personalised explanations to
+                            help you master concepts faster.</p>
+                        <ul class="feature-bullets">
+                            <li>Instant answers to academic and skill-based questions</li>
+                            <li>Personalised guidance based on learning progress</li>
+                            <li>Available 24/7 across all devices</li>
+                            <li>Smart recommendations for improved understanding</li>
+                        </ul>
+                        <a href="#contact" class="feature-link">
+                            Get Started
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Panel 2 -->
+                <div class="feature-panel" id="t2" role="tabpanel">
+                    <div class="feature-img reveal">
+                        <img src="assets/Smart assesments.png" alt="Smart Assessments" class="feature-display-img" />
+                    </div>
+                    <div class="feature-copy reveal reveal-delay-1">
+                        <h3>Feature 02</h3>
+                        <h2>Smart Assessment That Evolves With You</h2>
+                        <p>Our adaptive testing engine continuously evaluates your performance and adjusts question
+                            difficulty accordingly, ensuring accurate skill measurement and meaningful learning
+                            insights.</p>
+                        <ul class="feature-bullets">
+                            <li>Dynamic question difficulty adjustment</li>
+                            <li>Knowledge gap identification</li>
+                            <li>Performance-based assessment pathways</li>
+                            <li>Instant feedback and improvement suggestions</li>
+                        </ul>
+                        <a href="#contact" class="feature-link">
+                            Get Started
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Panel 3 -->
+                <div class="feature-panel" id="t3" role="tabpanel">
+                    <div class="feature-img reveal">
+                        <img src="C:/Users/HP/.gemini/antigravity/brain/d4f1aa81-6813-46da-9f70-b0ebb571ee46/learn_practice_perfect_1781088343062.png" alt="Learn & Practice" class="feature-display-img" />
+                    </div>
+                    <div class="feature-copy reveal reveal-delay-1">
+                        <h3>Feature 03</h3>
+                        <h2>Interactive Learning Through Real-World Experience</h2>
+                        <p>Engage with rich multimedia content, AI tutors, quizzes, assignments, coding exercises, and
+                            hands-on projects designed to strengthen practical understanding and application.</p>
+                        <ul class="feature-bullets">
+                            <li>Video lessons and interactive learning modules</li>
+                            <li>AI-guided practice sessions</li>
+                            <li>Assignments, quizzes, and project-based activities</li>
+                            <li>Real-world simulations and case studies</li>
+                        </ul>
+                        <a href="#contact" class="feature-link">
+                            Get Started
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Panel 4 -->
+                <div class="feature-panel" id="t4" role="tabpanel">
+                    <div class="feature-img reveal">
+                        <img src="C:/Users/HP/.gemini/antigravity/brain/d4f1aa81-6813-46da-9f70-b0ebb571ee46/learning_roadmap_people_1781087881236.png" alt="Learning Plan Roadmap" class="feature-display-img" />
+                    </div>
+                    <div class="feature-copy reveal reveal-delay-1">
+                        <h3>Feature 04</h3>
+                        <h2>A Roadmap Designed Specifically for You</h2>
+                        <p>Receive a customised learning plan based on your goals, interests, academic background, and
+                            skill level. The platform continuously updates your plan to keep you on the fastest path
+                            toward success.</p>
+                        <ul class="feature-bullets">
+                            <li>Personalised course recommendations</li>
+                            <li>Goal-oriented learning pathways</li>
+                            <li>Progress tracking and milestone management</li>
+                            <li>AI-driven curriculum optimisation</li>
+                        </ul>
+                        <a href="#contact" class="feature-link">
+                            Get Started
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Panel 5 -->
+                <div class="feature-panel" id="t5" role="tabpanel">
+                    <div class="feature-img reveal">
+                        <img src="assets/learngrow.png" alt="Upskill & Grow" class="feature-display-img" />
+                    </div>
+                    <div class="feature-copy reveal reveal-delay-1">
+                        <h3>Feature 05</h3>
+                        <h2>Build Skills and Achievements</h2>
+                        <p>Develop industry-relevant skills through structured learning tracks and earn recognised
+                            resources that enhance academic and professional opportunities.</p>
+                        <ul class="feature-bullets">
+                            <li>Industry-aligned skill development programmes</li>
+                            <li>Verified resources and achievements</li>
+                            <li>Career-focused learning pathways</li>
+                            <li>Continuous professional growth opportunities</li>
+                        </ul>
+                        <a href="#contact" class="feature-link">
+                            Get Started
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Panel 6 -->
+                <div class="feature-panel" id="t6" role="tabpanel">
+                    <div class="feature-img reveal">
+                        <img src="C:/Users/HP/.gemini/antigravity/brain/d4f1aa81-6813-46da-9f70-b0ebb571ee46/reports_clean_1781087582420.png" alt="Reports & Analytics" class="feature-display-img" />
+                    </div>
+                    <div class="feature-copy reveal reveal-delay-1">
+                        <h3>Feature 06</h3>
+                        <h2>Track Performance with Actionable Insights</h2>
+                        <p>Gain complete visibility into learning progress through detailed reports, analytics
+                            dashboards, attendance records, assessment scores, and performance trends.</p>
+                        <ul class="feature-bullets">
+                            <li>Student performance reports</li>
+                            <li>Assessment and assignment analytics</li>
+                            <li>Progress monitoring dashboards</li>
+                            <li>Parent, teacher, and administrator insights</li>
+                        </ul>
+                        <a href="#contact" class="feature-link">
+                            Get Started
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Panel 7 -->
+                <div class="feature-panel" id="t7" role="tabpanel">
+                    <div class="feature-img reveal">
+                        <img src="C:/Users/HP/.gemini/antigravity/brain/d4f1aa81-6813-46da-9f70-b0ebb571ee46/resources_people_1781088040390.png" alt="Resource Library" class="feature-display-img" />
+                    </div>
+                    <div class="feature-copy reveal reveal-delay-1">
+                        <h3>Feature 07</h3>
+                        <h2>Everything You Need in One Place</h2>
+                        <p>Access a comprehensive collection of learning materials, including notes, eBooks,
+                            presentations, videos, practice exercises, question banks, and downloadable resources.</p>
+                        <ul class="feature-bullets">
+                            <li>Digital library and study materials</li>
+                            <li>Video tutorials and recorded sessions</li>
+                            <li>Practice papers and question banks</li>
+                            <li>Downloadable resources for offline learning</li>
+                        </ul>
+                        <a href="#contact" class="feature-link">
+                            Get Started
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M4 9h10M10 5l4 4-4 4" stroke="currentColor" stroke-width="1.8"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div><!-- /features-content -->
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="hiw-section" id="how-it-works">
+        <div class="section-inner">
+            <div class="section-header reveal">
+                <div class="section-eyebrow">How It Works</div>
+                <h2 class="section-title">Your Journey to Mastery in 6 Steps</h2>
+                <p class="section-sub">From sign-up to career readiness — a clear, guided path powered by AI at every
+                    stage.</p>
+            </div>
+            <div class="hiw-steps">
+                <div class="hiw-step reveal">
+                    <div class="step-num">01</div>
+                    <h4>Sign Up &amp; Create Profile</h4>
+                    <p>Create your account and set your learning goals. Our onboarding captures your background and
+                        aspirations in minutes.</p>
+                </div>
+                <div class="hiw-step reveal reveal-delay-1">
+                    <div class="step-num">02</div>
+                    <h4>Initial Skill Assessment</h4>
+                    <p>Complete a diagnostic assessment to identify your current knowledge level and pinpoint where to
+                        begin.</p>
+                </div>
+                <div class="hiw-step reveal reveal-delay-2">
+                    <div class="step-num">03</div>
+                    <h4>Personalised Learning Plan</h4>
+                    <p>Receive a customised roadmap tailored to your learning objectives, skill gaps, and career
+                        direction.</p>
+                </div>
+                <div class="hiw-step reveal">
+                    <div class="step-num">04</div>
+                    <h4>Learn &amp; Practice</h4>
+                    <p>Access lessons, resources, assessments, and AI-assisted learning tools — at your own pace, on any
+                        device.</p>
+                </div>
+                <div class="hiw-step reveal reveal-delay-1">
+                    <div class="step-num">05</div>
+                    <h4>Track Progress &amp; Reports</h4>
+                    <p>Monitor performance through real-time reports and analytics. Stay informed with every milestone
+                        achieved.</p>
+                </div>
+                <div class="hiw-step reveal reveal-delay-2">
+                    <div class="step-num">06</div>
+                    <h4>Learn &amp; Grow</h4>
+                    <p>Earn certifications, develop new skills, and achieve your academic or career goals with
+                        SkaiMitra's placement support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="nav-logo-text">Skai<span>Mitra</span></span>
+                    <p>Advaitecs Private Limited — Empowering students across Andhra Pradesh and South India with
+                        intelligent, affordable AI-powered education.</p>
+                    <div class="footer-contact-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M2 4l6 5 6-5M2 3h12a1 1 0 011 1v8a1 1 0 01-1 1H2a1 1 0 01-1-1V4a1 1 0 011-1z"
+                                stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        support@advaitecs.com
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M14 10.5c-.5 1-1.5 1.5-2.5 1.5C5.5 12 4 4 4 4 4 3 4.5 2 5.5 1.5L7 4l-1 2 3 3 2-1 2.5 1.5z"
+                                stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        +91 96039 92299
+                    </div>
+                    <div class="footer-contact-item">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M8 1.5A4.5 4.5 0 018 10.5M8 10.5S3 13 3 8a5 5 0 1110 0c0 5-5 2.5-5 2.5z"
+                                stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        Nidamanuru Poranki Main Road, Vijayawada, AP 521104, Andhra Pradesh, India
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Platform</h5>
+                    <ul>
+                        <li><a href="#features">AI Assistant</a></li>
+                        <li><a href="#features">Smart Assessments</a></li>
+                        <li><a href="#features">Learning Plan</a></li>
+                        <li><a href="#features">Reports &amp; Analytics</a></li>
+                        <li><a href="#features">Resource Library</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="#home">About SkaiMitra</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#contact">Careers</a></li>
+                        <li><a href="#contact">Privacy Policy</a></li>
+                        <li><a href="#contact">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <div class="footer-form-title">Contact Us</div>
+                    <div class="footer-form-sub">Fill in your details and we'll get back to you shortly.</div>
+                    <form onsubmit="handleSubmit(event)" novalidate>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label>Name *</label>
+                                <input type="text" placeholder="Your name" required />
+                            </div>
+                            <div class="form-field">
+                                <label>Phone *</label>
+                                <input type="tel" placeholder="+91 00000 00000" required />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field full">
+                                <label>E-mail *</label>
+                                <input type="email" placeholder="your@email.com" required />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-field full">
+                                <label>Tell us more about your request *</label>
+                                <textarea placeholder="How can we help you?" required></textarea>
+                            </div>
+                        </div>
+                        <label class="form-consent">
+                            <input type="checkbox" required />
+                            I hereby agree that this data will be stored and processed for the purpose of establishing
+                            contact. I am aware that I can revoke my consent at any time.
+                        </label>
+                        <p style="font-size:.72rem;color:rgba(255,255,255,0.3);margin-bottom:.75rem">* Please fill in
+                            all required fields.</p>
+                        <button type="submit" class="form-submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="footer-divider" />
+            <div class="footer-bottom">
+                <span>© 2025 Advaitecs Private Limited. All rights reserved.</span>
+                <span>SkaiMitra — Empowering India's Next Generation of Tech Talent</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Feature tab switcher
+        function switchTab(btn, panelId) {
+            document.querySelectorAll('.ftab').forEach(t => t.classList.remove('active'))
+            document.querySelectorAll('.feature-panel').forEach(p => p.classList.remove('active'))
+            btn.classList.add('active')
+            document.getElementById(panelId).classList.add('active')
+            // Re-trigger reveal on newly visible panel
+            const panel = document.getElementById(panelId)
+            panel.querySelectorAll('.reveal').forEach(el => {
+                el.classList.remove('visible')
+                setTimeout(() => el.classList.add('visible'), 50)
+            })
+        }
+
+        // Scroll reveal
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) e.target.classList.add('visible')
+            })
+        }, { threshold: 0.12 })
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el))
+
+        // 3D tilt on hero cards
+        document.querySelectorAll('.ag-card:not(.main)').forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect()
+                const cx = rect.left + rect.width / 2
+                const cy = rect.top + rect.height / 2
+                const dx = (e.clientX - cx) / rect.width
+                const dy = (e.clientY - cy) / rect.height
+                card.style.transform = `perspective(600px) rotateY(${dx * 12}deg) rotateX(${-dy * 12}deg) translateY(-6px) scale(1.03)`
+            })
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = ''
+            })
+        })
+
+        // Form submit handler
+        function handleSubmit(e) {
+            e.preventDefault()
+            const btn = e.target.querySelector('.form-submit')
+            btn.textContent = 'Sending...'
+            btn.disabled = true
+            setTimeout(() => {
+                btn.textContent = 'Message Sent ✓'
+                btn.style.background = '#16A34A'
+                setTimeout(() => {
+                    btn.textContent = 'Submit'
+                    btn.style.background = ''
+                    btn.disabled = false
+                    e.target.reset()
+                }, 3000)
+            }, 1200)
+        }
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Training | Advaitecs</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/png" href="../images/Advaitecs_Fav_icon.png">
+</head>
+<body class="page-cloud">
+<body>
+
+  <header class="main-header">
+
+  <!-- MOBILE OVERLAY -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <nav class="navbar">
+
+    <!-- LOGO -->
+    <div class="logo">
+      <a href="../index.html"><img src="../images/Adv_MainLogo_V5.png" alt="Advaitecs Logo"></a>
+    </div>
+
+    <div class="nav-right">
+
+      <!-- Desktop Contact -->
+      <div class="contact-number">+91 96039 92299</div>
+
+      <!-- Hamburger -->
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+
+      <!-- NAV LINKS -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li>
+
+        <!-- DESKTOP dropdown -->
+        <li class="dropdown desktop-only">
+          <a href="#">Programs ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="ai-training.html">AI Training</a></li>
+            <li><a href="cloud-technologies.html">Cloud Technologies</a></li>
+            <li><a href="cyber-security.html">Cyber Security</a></li>
+          </ul>
+        </li>
+
+        <!-- MOBILE trigger -->
+        <li class="mobile-parent mobile-only" data-menu="programs">Programs ▾</li>
+
+        <!-- Workshops -->
+        <li class="dropdown desktop-only">
+          <a href="#">Workshops ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="../workshops/schools.html">Schools</a></li>
+            <li><a href="../workshops/professional.html">Professional</a></li>
+          </ul>
+        </li>
+
+        <li class="mobile-parent mobile-only" data-menu="workshops">Workshops ▾</li>
+
+        <li><a href="../career.html">Careers</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../contact.html">Contact Us</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <!-- RIGHT-SIDE MOBILE SUBMENU -->
+  <div id="subMenu" class="sub-menu-panel mobile-only">
+    <div class="sub-menu-back" id="subMenuBack">← Back</div>
+    <h3 id="subMenuTitle"></h3>
+    <ul id="subMenuList"></ul>
+  </div>
+
+</header>
+
+<!-- IMPORTANT: correct script path for pages inside programs/ -->
+<script src="../js/main.js"></script>
+<!-- ================= HERO BANNER ================= -->
+<section class="hero-banner">
+    <img src="../images/CloudTechnologiesBanner.png" alt="Cloud Technologies Banner">
+</section>
+<section class="cloud-training-intro">
+  <h2>Cloud Training Programs</h2>
+
+  <p>
+    Take your cloud skills to the next level with our structured and industry-aligned
+    training program, offering hands-on experience, classroom sessions, personalized
+    coaching, and real-world exercises. Whether you're just starting or looking to build
+    development expertise in cloud platforms, our dual-track approach - Foundational and
+    Developer - ensures a seamless learning journey for all skill levels.
+  </p>
+</section>
+<!-- ================= CLOUD TRACKS SECTION ================= -->
+<section class="cloud-tracks-section">
+
+  <div class="cloud-tracks-grid">
+
+    <!-- ===== Foundational Track ===== -->
+    <div class="cloud-track-card">
+      <img src="../images/newbie.png" alt="Foundational Cloud Track" class="track-icon">
+
+      <h3>Foundational Track:</h3>
+      <h4>Cloud Technologies for Beginners</h4>
+
+      <p>
+        This track is designed for individuals who are new to cloud computing or transitioning
+        into the tech space. It provides a solid grounding in the core concepts and services of
+        Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP).
+      </p>
+
+      <h5>What You Will Learn:</h5>
+      <ul>
+        <li>Introduction to Cloud Computing & Deployment Models</li>
+        <li>Overview of AWS, Azure & GCP – similarities, differences & use cases</li>
+        <li>Understanding cloud service models – IaaS, PaaS, SaaS</li>
+        <li>Basics of compute, storage, networking & databases in the cloud</li>
+        <li>Introduction to cloud billing, pricing models & cost optimization</li>
+        <li>Identity & Access Management (IAM) fundamentals</li>
+        <li>Hands-on labs: Setting up your first cloud environment</li>
+      </ul>
+
+      <h5>Delivery Mode:</h5>
+      <ul>
+        <li>Classroom-based sessions with expert instructors</li>
+        <li>Personalized coaching to address individual learning needs</li>
+        <li>Interactive exercises & real-world simulations for hands-on practice</li>
+      </ul>
+
+      <h5>Ideal For:</h5>
+      <p>
+        Students, entry-level IT professionals, or anyone looking to understand and explore
+        the world of cloud computing.
+      </p>
+    </div>
+
+    <!-- ===== Developer Track ===== -->
+    <div class="cloud-track-card">
+      <img src="../images/coding.png" alt="Developer Cloud Track" class="track-icon">
+
+      <h3>Developer Track:</h3>
+      <h4>Cloud Development & Integration</h4>
+
+      <p>
+        This advanced track is tailored for developers and IT professionals aiming to build,
+        deploy, and manage cloud-native applications. It dives deep into service integration,
+        automation, and real-world application development using AWS, Azure, and GCP tools.
+      </p>
+
+      <h5>What You Will Learn:</h5>
+      <ul>
+        <li>Cloud-native application architecture & design patterns</li>
+        <li>Developing scalable applications using AWS Lambda, Azure Functions, and GCP Cloud Functions</li>
+        <li>Building CI/CD pipelines with services like AWS CodePipeline, Azure DevOps, and Google Cloud Build</li>
+        <li>Working with containers: Docker, Kubernetes, and cloud-managed services (EKS, AKS, GKE)</li>
+        <li>Serverless computing and microservices design</li>
+        <li>Integration with APIs, databases, and third-party services</li>
+        <li>Monitoring, logging, and performance tuning of cloud applications</li>
+        <li>Security best practices for cloud-based development</li>
+      </ul>
+
+      <h5>Delivery Mode:</h5>
+      <ul>
+        <li>In-depth classroom training with structured modules</li>
+        <li>One-on-one mentorship for complex topics and career guidance</li>
+        <li>Capstone projects and practical labs simulating enterprise use-cases</li>
+      </ul>
+
+      <h5>Ideal For:</h5>
+      <p>
+        Software developers, DevOps engineers, system architects, and IT professionals aiming
+        to advance their cloud development skills and prepare for certifications or career growth.
+      </p>
+    </div>
+
+  </div>
+</section>
+<section class="why-choose-section">
+  <h2 class="why-title">Why Choose Us?</h2>
+
+  <ul class="why-list">
+    <li>Industry-experienced trainers with real-world project exposure</li>
+    <li>Practical approach with 70% hands-on learning</li>
+    <li>Certification guidance for AWS, Azure, and GCP tracks</li>
+    <li>Small batch sizes for personalized attention</li>
+    <li>Post-training support and mentorship</li>
+  </ul>
+</section>
+<section class="cta-section">
+  <div class="cta-content">
+    <h2>Join Us in Shaping Your Future</h2>
+    <h3>Train with Advaitecs</h3>
+
+    <p>
+      Engage with us to elevate your educational strategies and training
+      methodologies. Let us assist you in achieving your vision through
+      technology and innovation.
+    </p>
+
+    <a href="../contact.html" class="cta-btn">Get Started</a>
+  </div>
+</section>

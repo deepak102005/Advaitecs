@@ -1,0 +1,15 @@
+# IDEs and editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# PHP Mailer vendor or composer files if any (PHPMailer is a folder here, but let's see if it should be tracked or ignored. Usually custom vendor folders like PHPMailer are committed if no composer is used, so let's keep it unless specified).
