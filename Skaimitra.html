@@ -72,12 +72,12 @@
 
         /* ─── HERO ─── */
         .hero {
-            min-height: calc(100vh - 120px);
+            min-height: auto;
             background: linear-gradient(160deg, #F0F4FF 0%, #EEF1F7 40%, #F8F9FC 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 40px 5% 60px;
+            padding: 60px 5% 40px;
             position: relative;
             overflow: hidden
         }
@@ -130,7 +130,7 @@
         }
 
         .hero-pills-row {
-            grid-column: 1;
+            grid-column: 1 / 3;
             grid-row: 2;
         }
 
@@ -499,7 +499,7 @@
         /* ─── FEATURES SECTION (image-match layout) ─── */
         .features-section {
             background: var(--bg-section);
-            padding: 90px 5%
+            padding: 40px 5% 90px
         }
 
         .features-tabs {
@@ -1259,9 +1259,6 @@
                                 stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </a>
-                    <a href="#how-it-works" class="btn-secondary">
-                        How It Works
-                    </a>
                 </div>
             </div>
             <div class="hero-visual">
@@ -1282,7 +1279,6 @@
     <section class="features-section" id="features">
         <div class="section-inner">
             <div class="section-header reveal">
-                <div class="section-eyebrow">Features</div>
                 <h2 class="section-title">Powerful Features for Future-Ready Learning</h2>
                 <p class="section-sub">Every feature is designed to create a smarter, more engaging, and personalised
                     learning experience powered by artificial intelligence.</p>
@@ -1489,55 +1485,7 @@
         </div>
     </section>
 
-    <!-- HOW IT WORKS -->
-    <section class="hiw-section" id="how-it-works">
-        <div class="section-inner">
-            <div class="section-header reveal">
-                <div class="section-eyebrow">How It Works</div>
-                <h2 class="section-title">Your Journey to Mastery in 6 Steps</h2>
-                <p class="section-sub">From sign-up to career readiness — a clear, guided path powered by AI at every
-                    stage.</p>
-            </div>
-            <div class="hiw-steps">
-                <div class="hiw-step reveal">
-                    <div class="step-num">01</div>
-                    <h4>Sign Up &amp; Create Profile</h4>
-                    <p>Create your account and set your learning goals. Our onboarding captures your background and
-                        aspirations in minutes.</p>
-                </div>
-                <div class="hiw-step reveal reveal-delay-1">
-                    <div class="step-num">02</div>
-                    <h4>Initial Skill Assessment</h4>
-                    <p>Complete a diagnostic assessment to identify your current knowledge level and pinpoint where to
-                        begin.</p>
-                </div>
-                <div class="hiw-step reveal reveal-delay-2">
-                    <div class="step-num">03</div>
-                    <h4>Personalised Learning Plan</h4>
-                    <p>Receive a customised roadmap tailored to your learning objectives, skill gaps, and career
-                        direction.</p>
-                </div>
-                <div class="hiw-step reveal">
-                    <div class="step-num">04</div>
-                    <h4>Learn &amp; Practice</h4>
-                    <p>Access lessons, resources, assessments, and AI-assisted learning tools — at your own pace, on any
-                        device.</p>
-                </div>
-                <div class="hiw-step reveal reveal-delay-1">
-                    <div class="step-num">05</div>
-                    <h4>Track Progress &amp; Reports</h4>
-                    <p>Monitor performance through real-time reports and analytics. Stay informed with every milestone
-                        achieved.</p>
-                </div>
-                <div class="hiw-step reveal reveal-delay-2">
-                    <div class="step-num">06</div>
-                    <h4>Learn &amp; Grow</h4>
-                    <p>Earn certifications, develop new skills, and achieve your academic or career goals with
-                        SkaiMitra's placement support.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- FOOTER -->
     <footer id="contact">
@@ -1587,7 +1535,6 @@
                     <h5>Company</h5>
                     <ul>
                         <li><a href="#home">About SkaiMitra</a></li>
-                        <li><a href="#how-it-works">How It Works</a></li>
                         <li><a href="#contact">Careers</a></li>
                         <li><a href="#contact">Privacy Policy</a></li>
                         <li><a href="#contact">Terms of Service</a></li>
