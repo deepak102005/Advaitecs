@@ -170,11 +170,6 @@ export default function SkaiMitraPage() {
                     <span>Achieve</span>
                   </div>
                 </div>
-
-                {/* Floating Script */}
-                <div className={styles.floatingScriptText}>
-                  Future Ready Together
-                </div>
               </div>
             </div>
           </div>

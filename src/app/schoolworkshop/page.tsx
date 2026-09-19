@@ -109,13 +109,6 @@ export default function SchoolWorkshopPage() {
                   alt="AI and Coding Workshops for Schools"
                   className={styles.heroImg}
                 />
-                <div className={styles.floatingDarkBadge}>
-                  <div>Learn</div>
-                  <div>Build</div>
-                  <div>Create</div>
-                  <div>Innovate</div>
-                  <div>Together</div>
-                </div>
               </div>
             </div>
           </div>

@@ -42,13 +42,12 @@ export default function Header() {
   }, []);
 
   const trainingItems: NavDropdownItem[] = [
-    { label: 'All Training Programs', href: '/Trainingprogarm' },
     { label: 'Full Stack Developer', href: '/fullstack' },
     { label: 'AI Career Ready', href: '/AICAREER' },
+    { label: 'Custom Programs', href: '/corporatetraining' },
   ];
 
   const workshopItems: NavDropdownItem[] = [
-    { label: 'All Workshops', href: '/workshop' },
     { label: 'For Schools', href: '/schoolworkshop' },
     { label: 'For Colleges & Enterprises', href: '/collegeenterpriseworkshop' },
     { label: 'Corporate Training', href: '/corporatetraining' },
