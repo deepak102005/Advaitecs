@@ -1,0 +1,894 @@
+.pageWrapper {
+  width: 100%;
+  background-color: #ffffff;
+  color: #0f172a;
+  overflow-x: hidden;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+.pageWrapper ::selection {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* =========================================
+   COMMON SECTION HEADINGS
+   ========================================= */
+.sectionHeaderCenter {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.sectionSubtitle {
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* =========================================
+   1. HERO SECTION
+   ========================================= */
+.heroSection {
+  padding: 1.75rem 0 1.5rem;
+  background-color: #ffffff;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.heroEyebrow {
+  color: #1e3a8a;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.45rem;
+}
+
+.heroTitle {
+  font-size: 2.35rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.heroTitleHighlight {
+  color: #2563eb;
+  display: block;
+}
+
+.heroTagline {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 0.65rem;
+}
+
+.heroDesc {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #475569;
+  max-width: 520px;
+  margin-bottom: 1.25rem;
+}
+
+.heroFeaturesRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.65rem;
+  margin-bottom: 1.35rem;
+}
+
+.heroFeatureItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.4rem;
+}
+
+.heroFeatureCircle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.heroFeatureItem:hover .heroFeatureCircle {
+  background-color: #dbeafe;
+  transform: translateY(-2px);
+}
+
+.heroFeatureText {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.2;
+}
+
+.heroButtonGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.primaryBtnGreen {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: #00a651;
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.62rem 1.4rem;
+  border-radius: 6px;
+  border: 1px solid #008f45;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.primaryBtnGreen:hover {
+  background-color: #008f45;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 166, 81, 0.25);
+}
+
+.secondaryBtnOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: #ffffff;
+  color: #1e293b;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.62rem 1.35rem;
+  border-radius: 6px;
+  border: 1.5px solid #1e3a8a;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.secondaryBtnOutline:hover {
+  background-color: #eff6ff;
+  transform: translateY(-1px);
+}
+
+.heroMedia {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.heroImgContainer {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+}
+
+.heroImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* =========================================
+   2. TRANSFORM LEARNING AND CAREERS (4 Cards)
+   ========================================= */
+.transformSection {
+  padding: 1.75rem 0 1.5rem;
+  background-color: #ffffff;
+}
+
+.transformGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.transformCard {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.35rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease;
+}
+
+.transformCard:hover {
+  border-color: #bfdbfe;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px -2px rgba(37, 99, 235, 0.08);
+}
+
+.transformIconBox {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background-color: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.transformTitle {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #2563eb;
+  margin-bottom: 0.35rem;
+}
+
+.transformDesc {
+  font-size: 0.78rem;
+  color: #475569;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* =========================================
+   3. OUR WORKSHOP PROGRAMS (2 Side-by-Side Cards)
+   ========================================= */
+.programsSection {
+  padding: 1.75rem 0 1.5rem;
+  background-color: #ffffff;
+}
+
+.programsHeaderRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 1.35rem;
+  gap: 1rem;
+}
+
+.programsHeaderLeft {
+  max-width: 650px;
+}
+
+.programsTitle {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.programsSubtitle {
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.45;
+}
+
+.viewAllLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: #2563eb;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.viewAllLink:hover {
+  color: #1d4ed8;
+  transform: translateX(2px);
+}
+
+.programsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.workshopCard {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+}
+
+.workshopCard:hover {
+  border-color: #bfdbfe;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -4px rgba(37, 99, 235, 0.1);
+}
+
+.workshopThumbWrapper {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+}
+
+.workshopThumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.workshopBody {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.workshopHeaderRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.workshopIconBoxBlue {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background-color: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.workshopTitleCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.workshopCardTitle {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.25;
+}
+
+.workshopCardTagline {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.workshopBulletList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  flex-grow: 1;
+}
+
+.workshopBulletItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #334155;
+  line-height: 1.35;
+}
+
+.bulletDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #2563eb;
+  margin-top: 0.35rem;
+  flex-shrink: 0;
+}
+
+.workshopLearnMoreBtn {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #2563eb;
+  text-decoration: none;
+  border: 1px solid #bfdbfe;
+  background-color: #ffffff;
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.workshopLearnMoreBtn:hover {
+  background-color: #eff6ff;
+  border-color: #2563eb;
+}
+
+/* =========================================
+   4. WHO CAN PARTICIPATE & WHY CHOOSE (2 Cols)
+   ========================================= */
+.splitTwoColsSection {
+  padding: 1.5rem 0;
+  background-color: #ffffff;
+}
+
+.splitTwoColsGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.splitCardBox {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.splitCardTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 0.25rem;
+}
+
+.splitCardSubtitle {
+  font-size: 0.82rem;
+  color: #64748b;
+  margin-bottom: 1.15rem;
+}
+
+/* 3 Audience Sub-Cards in Col 1 */
+.audienceThreeRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+  flex-grow: 1;
+}
+
+.audienceCard {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem 0.65rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.audienceIcon {
+  color: #2563eb;
+  margin-bottom: 0.25rem;
+}
+
+.audienceTitle {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.25;
+}
+
+.audienceDesc {
+  font-size: 0.72rem;
+  color: #64748b;
+  line-height: 1.35;
+  margin: 0;
+}
+
+/* Why Choose Checklist in Col 2 */
+.whyChooseList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.whyChooseItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #334155;
+  line-height: 1.35;
+}
+
+.greenCheckIcon {
+  color: #00a651;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+/* =========================================
+   5. HOW IT WORKS & DELIVERY OPTIONS (2 Cols)
+   ========================================= */
+.howAndDeliverySection {
+  padding: 1.5rem 0 2rem;
+  background-color: #ffffff;
+}
+
+.howAndDeliveryGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+/* How It Works (4 Steps) */
+.howStepsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+  flex-grow: 1;
+}
+
+.howStepItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.35rem;
+}
+
+.howStepBadgeGreen {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #00a651;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.howStepBadgeBlue {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.howStepBadgePurple {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #8b5cf6;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.howStepTitle {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.howStepDesc {
+  font-size: 0.72rem;
+  color: #64748b;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.howArrowSeparator {
+  color: #94a3b8;
+  font-size: 0.95rem;
+  padding-bottom: 1.25rem;
+}
+
+/* Delivery Options (4 Tiles) */
+.deliveryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.65rem;
+  flex-grow: 1;
+}
+
+.deliveryCard {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.95rem 0.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.deliveryIcon {
+  color: #2563eb;
+}
+
+.deliveryTitle {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.deliverySub {
+  font-size: 0.7rem;
+  color: #64748b;
+  line-height: 1.25;
+  margin: 0;
+}
+
+/* =========================================
+   6. PRE-FOOTER CTA BANNER (Deep Dark Navy)
+   ========================================= */
+.ctaBannerSection {
+  background: radial-gradient(circle at 50% 50%, #001f66 0%, #000c2a 100%);
+  padding: 2.25rem 0;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #1e293b;
+}
+
+.ctaBannerSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(1.5px 1.5px at 50px 70px, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1.5px 1.5px at 150px 140px, rgba(0, 166, 81, 0.5), transparent),
+    radial-gradient(1px 1px at 280px 40px, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1.5px 1.5px at 400px 180px, rgba(37, 99, 235, 0.5), transparent),
+    radial-gradient(1.5px 1.5px at 600px 70px, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 750px 150px, rgba(0, 166, 81, 0.4), transparent),
+    radial-gradient(1.5px 1.5px at 900px 50px, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1.5px 1.5px at 1100px 130px, rgba(37, 99, 235, 0.5), transparent);
+  background-repeat: repeat;
+  background-size: 1200px 200px;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.ctaBannerContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ctaTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.45rem;
+  letter-spacing: -0.02em;
+}
+
+.ctaSubtitle {
+  font-size: 0.88rem;
+  color: #cbd5e1;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.ctaButtonsRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.15rem;
+}
+
+.ctaBtnGreen {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: #00a651;
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.62rem 1.4rem;
+  border-radius: 6px;
+  border: 1px solid #008f45;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.ctaBtnGreen:hover {
+  background-color: #008f45;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 166, 81, 0.25);
+}
+
+.ctaBtnOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.6rem 1.35rem;
+  border-radius: 6px;
+  border: 1px solid #ffffff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.ctaBtnOutline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.ctaContactInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+  color: #cbd5e1;
+}
+
+.ctaContactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.ctaContactItem:hover {
+  color: #ffffff;
+}
+
+/* =========================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================= */
+@media (max-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .transformGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .programsGrid {
+    grid-template-columns: 1fr;
+  }
+  .splitTwoColsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .howAndDeliveryGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroFeaturesRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .transformGrid {
+    grid-template-columns: 1fr;
+  }
+  .audienceThreeRow {
+    grid-template-columns: 1fr;
+  }
+  .howStepsContainer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .howArrowSeparator {
+    transform: rotate(90deg);
+    padding: 0;
+  }
+  .deliveryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .heroTitle {
+    font-size: 1.85rem;
+  }
+  .programsHeaderRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ctaButtonsRow {
+    flex-direction: column;
+    width: 100%;
+  }
+  .ctaBtnGreen,
+  .ctaBtnOutline,
+  .primaryBtnGreen,
+  .secondaryBtnOutline {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+  .heroSection {
+    padding: 1.25rem 0 1rem;
+  }
+  .transformSection,
+  .programsSection,
+  .splitSection,
+  .howAndDeliverySection,
+  .ctaBannerSection {
+    padding: 1.25rem 0 1rem;
+  }
+}
+

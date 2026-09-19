@@ -1,0 +1,973 @@
+.pageWrapper {
+  width: 100%;
+  background-color: #ffffff;
+  color: #0f172a;
+  overflow-x: hidden;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+.pageWrapper ::selection {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* =========================================
+   COMMON HEADINGS
+   ========================================= */
+.sectionHeaderCenter {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.sectionSubtitle {
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* =========================================
+   1. HERO SECTION
+   ========================================= */
+.heroSection {
+  padding: 1.75rem 0 1.5rem;
+  background-color: #ffffff;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+}
+
+/* SkaiMitra Logo Row */
+.skaiMitraBrandRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.skaiMitraLogoIcon {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.skaiMitraBrandText {
+  display: flex;
+  flex-direction: column;
+}
+
+.skaiMitraBrandName {
+  font-size: 1.85rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.brandSkai {
+  color: #0038cb;
+}
+
+.brandMitra {
+  color: #00a651;
+}
+
+.skaiMitraTagline {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #64748b;
+  letter-spacing: 0.01em;
+}
+
+.heroEyebrow {
+  color: #0038cb;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.45rem;
+}
+
+.heroTitle {
+  font-size: 2.45rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #0038cb;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.heroSubtitle {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #475569;
+  max-width: 520px;
+  margin-bottom: 1.25rem;
+}
+
+/* 4 Feature Badges */
+.heroFeaturesRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.4rem;
+}
+
+.heroFeaturePill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.4rem;
+}
+
+.heroFeatureCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #eff6ff;
+  border: 1.5px solid #bfdbfe;
+  color: #0038cb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.heroFeaturePill:hover .heroFeatureCircle {
+  background-color: #dbeafe;
+  transform: scale(1.05);
+}
+
+.heroFeatureLabel {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.2;
+}
+
+/* Action Buttons */
+.heroButtonGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.primaryBtnGreen {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: #00a651;
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.62rem 1.4rem;
+  border-radius: 6px;
+  border: 1px solid #008f45;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.primaryBtnGreen:hover {
+  background-color: #008f45;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 166, 81, 0.25);
+}
+
+.secondaryBtnBlueOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: #ffffff;
+  color: #0038cb;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.62rem 1.35rem;
+  border-radius: 6px;
+  border: 1.5px solid #0038cb;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.secondaryBtnBlueOutline:hover {
+  background-color: #eff6ff;
+  transform: translateY(-1px);
+}
+
+/* Hero Media with Floating Badges */
+.heroMedia {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.heroImgContainer {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: visible;
+}
+
+.heroImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+  object-fit: cover;
+}
+
+/* Floating Vertical Badge on Top Right */
+.floatingStepsBadge {
+  position: absolute;
+  top: 12px;
+  right: -15px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.65rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 6px 16px -2px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+}
+
+.floatingStepItem {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #0038cb;
+}
+
+.floatingStepIcon {
+  color: #0038cb;
+  flex-shrink: 0;
+}
+
+/* Floating Script "Future Ready Together" */
+.floatingScriptText {
+  position: absolute;
+  bottom: 15px;
+  right: -10px;
+  font-family: 'Comic Sans MS', 'Caveat', 'Segoe UI', cursive, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #0038cb;
+  line-height: 1.15;
+  transform: rotate(-8deg);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+}
+
+/* =========================================
+   2. ONE PLATFORM. COMPLETE LEARNING EXPERIENCE. (4 Cards)
+   ========================================= */
+.onePlatformSection {
+  padding: 1.75rem 0 1.5rem;
+  background-color: #ffffff;
+}
+
+.fourPillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.pillarCard {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.35rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease;
+}
+
+.pillarCard:hover {
+  border-color: #bfdbfe;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(0, 56, 203, 0.08);
+}
+
+.pillarIconCircle {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: #eff6ff;
+  color: #0038cb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.pillarTitle {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #0038cb;
+  margin-bottom: 0.35rem;
+}
+
+.pillarDesc {
+  font-size: 0.78rem;
+  color: #475569;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* =========================================
+   3. SKILL EDUCATION WITH SKAIMITRA (4 Cards with Images)
+   ========================================= */
+.skillsSection {
+  padding: 1.75rem 0 1.5rem;
+  background-color: #ffffff;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.skillCard {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+}
+
+.skillCard:hover {
+  border-color: #bfdbfe;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -4px rgba(0, 56, 203, 0.1);
+}
+
+.skillThumbnailWrapper {
+  width: 100%;
+  height: 155px;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  position: relative;
+}
+
+.skillThumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.skillBody {
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.skillHeaderRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  margin-bottom: 0.75rem;
+}
+
+.skillIconBox {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background-color: #eff6ff;
+  color: #0038cb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.skillTitle {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #0038cb;
+  line-height: 1.25;
+}
+
+.skillBulletList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  flex-grow: 1;
+}
+
+.skillBulletItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  color: #334155;
+  line-height: 1.35;
+}
+
+.bulletDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #0038cb;
+  margin-top: 0.35rem;
+  flex-shrink: 0;
+}
+
+.learnMoreBtn {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #0038cb;
+  text-decoration: none;
+  border: 1px solid #bfdbfe;
+  background-color: #ffffff;
+  padding: 0.4rem 0.85rem;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.learnMoreBtn:hover {
+  background-color: #eff6ff;
+  border-color: #0038cb;
+}
+
+/* =========================================
+   4. EVERYTHING SCHOOLS NEED IN ONE LMS (12 Tiles)
+   ========================================= */
+.lmsSection {
+  padding: 1.75rem 0 1.5rem;
+  background-color: #ffffff;
+}
+
+.lmsGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.85rem;
+}
+
+.lmsCard {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.95rem 0.6rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease;
+  min-height: 95px;
+}
+
+.lmsCard:hover {
+  border-color: #bfdbfe;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px -2px rgba(0, 56, 203, 0.08);
+}
+
+.lmsIcon {
+  color: #0038cb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lmsCardTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.25;
+  margin: 0;
+}
+
+/* =========================================
+   5. BUILT FOR EVERY USER (4 Profile Cards)
+   ========================================= */
+.usersSection {
+  padding: 1.75rem 0 1.5rem;
+  background-color: #ffffff;
+}
+
+.usersGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.userProfileCard {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.15rem 0.95rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease;
+}
+
+.userProfileCard:hover {
+  border-color: #bfdbfe;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px -2px rgba(0, 56, 203, 0.08);
+}
+
+.userAvatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #e2e8f0;
+}
+
+.userInfoCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.userRoleTitle {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #0038cb;
+  margin-bottom: 0.3rem;
+}
+
+.userRoleDesc {
+  font-size: 0.74rem;
+  color: #475569;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* =========================================
+   6. THREE-COLUMN SECTION (Supports, Why Choose, Outcomes)
+   ========================================= */
+.triColSection {
+  padding: 1.75rem 0 2rem;
+  background-color: #ffffff;
+}
+
+.triColGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 1fr;
+  gap: 1.35rem;
+  align-items: stretch;
+}
+
+.triColCard {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1.35rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.colCardTitle {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0038cb;
+  margin-bottom: 1.15rem;
+}
+
+/* 4 Steps in Col 1 */
+.processStepsVertical {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.processStepRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.processStepCircleNumber {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #00a651;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.processStepCircleNumberBlue {
+  background-color: #0038cb;
+}
+
+.processStepContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.processStepHeading {
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.15rem;
+}
+
+.processStepText {
+  font-size: 0.74rem;
+  color: #64748b;
+  line-height: 1.35;
+  margin: 0;
+}
+
+/* Checklist in Col 2 (Why Choose SkaiMitra) */
+.checkListWhy {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.checkItemWhy {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: #334155;
+  line-height: 1.35;
+}
+
+.checkIconCircleGreen {
+  color: #00a651;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+/* Col 3: Outcomes + For Schools Box */
+.outcomesList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.outcomeItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: #334155;
+  line-height: 1.35;
+}
+
+.outcomeIconBlue {
+  color: #0038cb;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.forSchoolsBox {
+  margin-top: auto;
+  background-color: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  padding: 0.85rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+}
+
+.schoolIconBox {
+  color: #0038cb;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.forSchoolsContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.forSchoolsTitle {
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: #0038cb;
+  margin-bottom: 0.15rem;
+}
+
+.forSchoolsSub {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.2rem;
+}
+
+.forSchoolsDesc {
+  font-size: 0.68rem;
+  color: #64748b;
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* =========================================
+   7. PRE-FOOTER CTA BANNER (Deep Dark Blue Radiant)
+   ========================================= */
+.ctaBannerSection {
+  background: radial-gradient(circle at 50% 50%, #001f66 0%, #000c2a 100%);
+  padding: 2.25rem 0;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #1e293b;
+}
+
+.ctaBannerSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(1.5px 1.5px at 50px 70px, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1.5px 1.5px at 150px 140px, rgba(0, 166, 81, 0.5), transparent),
+    radial-gradient(1px 1px at 280px 40px, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1.5px 1.5px at 400px 180px, rgba(0, 56, 203, 0.5), transparent),
+    radial-gradient(1.5px 1.5px at 600px 70px, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 750px 150px, rgba(0, 166, 81, 0.4), transparent),
+    radial-gradient(1.5px 1.5px at 900px 50px, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1.5px 1.5px at 1100px 130px, rgba(0, 56, 203, 0.5), transparent);
+  background-repeat: repeat;
+  background-size: 1200px 200px;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.ctaBannerContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ctaTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.45rem;
+  letter-spacing: -0.02em;
+}
+
+.ctaSubtitle {
+  font-size: 0.88rem;
+  color: #cbd5e1;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.ctaButtonsRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.15rem;
+}
+
+.ctaBtnGreen {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: #00a651;
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.62rem 1.4rem;
+  border-radius: 6px;
+  border: 1px solid #008f45;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.ctaBtnGreen:hover {
+  background-color: #008f45;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 166, 81, 0.25);
+}
+
+.ctaBtnOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.6rem 1.35rem;
+  border-radius: 6px;
+  border: 1px solid #ffffff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.ctaBtnOutline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.ctaContactInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+  color: #cbd5e1;
+}
+
+.ctaContactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.ctaContactItem:hover {
+  color: #ffffff;
+}
+
+/* =========================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================= */
+@media (max-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .fourPillarsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skillsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .lmsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .usersGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .triColGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroFeaturesRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .fourPillarsGrid {
+    grid-template-columns: 1fr;
+  }
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
+  .lmsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .usersGrid {
+    grid-template-columns: 1fr;
+  }
+  .heroTitle {
+    font-size: 1.85rem;
+  }
+  .ctaButtonsRow {
+    flex-direction: column;
+    width: 100%;
+  }
+  .ctaBtnGreen,
+  .ctaBtnOutline,
+  .primaryBtnGreen,
+  .secondaryBtnBlueOutline {
+    width: 100%;
+    justify-content: center;
+  }
+  .floatingStepsBadge {
+    display: none;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+  .heroSection {
+    padding: 1.25rem 0 1rem;
+  }
+  .fourPillarsSection,
+  .skillsSection,
+  .lmsSection,
+  .usersSection,
+  .triColSection,
+  .ctaBannerSection {
+    padding: 1.25rem 0 1rem;
+  }
+}
+

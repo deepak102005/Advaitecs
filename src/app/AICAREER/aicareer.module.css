@@ -1,0 +1,889 @@
+.pageWrapper {
+  width: 100%;
+  background-color: #ffffff;
+  color: #0f172a;
+  overflow-x: hidden;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+.pageWrapper ::selection {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* =========================================
+   1. HERO SECTION (Tightened & Polished)
+   ========================================= */
+.heroSection {
+  padding: 1.75rem 0 1.5rem;
+  background-color: #ffffff;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.heroEyebrow {
+  color: #2563eb;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.45rem;
+}
+
+.heroTitle {
+  font-size: 2.35rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.heroTitleHighlight {
+  color: #2563eb;
+  display: block;
+}
+
+.heroSubtitle {
+  font-size: 0.93rem;
+  line-height: 1.5;
+  color: #475569;
+  max-width: 520px;
+  margin-bottom: 1rem;
+}
+
+.heroBadgesRow {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.heroButtonGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.primaryBtnGreen {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: #059669;
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.62rem 1.35rem;
+  border-radius: 6px;
+  border: 1px solid #047857;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.primaryBtnGreen:hover {
+  background-color: #047857;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(5, 150, 105, 0.2);
+}
+
+.secondaryBtnOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: #ffffff;
+  color: #1e293b;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.62rem 1.25rem;
+  border-radius: 6px;
+  border: 1.5px solid #cbd5e1;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.secondaryBtnOutline:hover {
+  border-color: #94a3b8;
+  background-color: #f8fafc;
+  transform: translateY(-1px);
+}
+
+.heroMedia {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.heroImgWrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+}
+
+.heroImg {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* =========================================
+   COMMON SECTION HEADERS
+   ========================================= */
+.sectionHeaderCenter {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 1.75rem;
+}
+
+.sectionTitle {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.highlightText {
+  color: #2563eb;
+}
+
+.sectionSubtitle {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* =========================================
+   2. BECOME AN AI-READY PROFESSIONAL (4 Cards)
+   ========================================= */
+.pillarsSection {
+  padding: 1.75rem 0 1.5rem;
+  background-color: #ffffff;
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.pillarCard {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.35rem 1.15rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.pillarCard:hover {
+  transform: translateY(-2px);
+  border-color: #bfdbfe;
+  box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.08);
+}
+
+.pillarIconBox {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.85rem;
+}
+
+.pillarTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.45rem;
+}
+
+.pillarDesc {
+  font-size: 0.83rem;
+  color: #475569;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* =========================================
+   3. 16-WEEK LEARNING ROADMAP (Horizontal Flow)
+   ========================================= */
+.roadmapSection {
+  padding: 1.75rem 0 1.5rem;
+  background-color: #ffffff;
+}
+
+.roadmapContainer {
+  display: flex;
+  align-items: stretch;
+  gap: 0.75rem;
+}
+
+.roadmapCard {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.25rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s ease;
+}
+
+.roadmapCard:hover {
+  border-color: #bfdbfe;
+  transform: translateY(-2px);
+}
+
+.roadmapHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.roadmapNumber {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-weight: 800;
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.roadmapHeaderTexts {
+  display: flex;
+  flex-direction: column;
+}
+
+.roadmapWeeks {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.roadmapPhaseName {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #1d4ed8;
+}
+
+.capstoneHighlight {
+  color: #ea580c !important;
+}
+
+.roadmapList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  flex-grow: 1;
+}
+
+.roadmapItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  color: #475569;
+  line-height: 1.35;
+}
+
+.bulletDot {
+  width: 5px;
+  height: 5px;
+  background-color: #2563eb;
+  border-radius: 50%;
+  margin-top: 0.35rem;
+  flex-shrink: 0;
+}
+
+.roadmapSeparator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+  font-size: 1.25rem;
+  font-weight: 800;
+  padding: 0 0.15rem;
+}
+
+/* =========================================
+   4. TECHNOLOGIES YOU WILL LEARN
+   ========================================= */
+.techSection {
+  padding: 1.75rem 0 1.5rem;
+  background-color: #ffffff;
+}
+
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  gap: 0.65rem;
+}
+
+.techCard {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.75rem 0.35rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+  transition: all 0.2s ease;
+}
+
+.techCard:hover {
+  border-color: #bfdbfe;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.techIconBox {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.techLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0f172a;
+  white-space: nowrap;
+}
+
+/* =========================================
+   5. BATCHES & WEEKDAY SCHEDULE (Side by Side)
+   ========================================= */
+.scheduleSection {
+  padding: 1.5rem 0 1.5rem;
+  background-color: #ffffff;
+}
+
+.scheduleGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.batchesCard {
+  background-color: #ffffff;
+  border: 1.5px solid #3b82f6;
+  border-radius: 10px;
+  padding: 1.25rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.cardHeaderTitle {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+}
+
+.cardHeaderSubtitle {
+  font-size: 0.82rem;
+  color: #64748b;
+  margin-bottom: 1rem;
+}
+
+.batchesPillsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.65rem;
+}
+
+.batchPill {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.75rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.35rem;
+  transition: all 0.2s ease;
+}
+
+.batchPill:hover {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+.batchDateText {
+  font-size: 0.84rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.batchTypeText {
+  font-size: 0.72rem;
+  color: #64748b;
+}
+
+.scheduleCard {
+  background-color: #ffffff;
+  border: 1.5px solid #10b981;
+  border-radius: 10px;
+  padding: 1.25rem 1.35rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.scheduleCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.85rem;
+}
+
+.scheduleIconGreen {
+  color: #059669;
+}
+
+.scheduleTitle {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.scheduleList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.scheduleItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.84rem;
+  color: #334155;
+  line-height: 1.4;
+}
+
+.scheduleBullet {
+  width: 5px;
+  height: 5px;
+  background-color: #059669;
+  border-radius: 50%;
+  margin-top: 0.4rem;
+  flex-shrink: 0;
+}
+
+/* =========================================
+   6. PROGRAM HIGHLIGHTS & CAREER OPPORTUNITIES
+   ========================================= */
+.twoColSection {
+  padding: 1.5rem 0 1.5rem;
+  background-color: #ffffff;
+}
+
+.twoColGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.cardBox {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.highlightsListGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 1rem;
+  margin-top: 0.75rem;
+}
+
+.highlightCheckItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: #334155;
+  line-height: 1.35;
+}
+
+.checkIconCircle {
+  color: #059669;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.careerRolesRow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.55rem;
+  margin: 0.85rem 0 1rem;
+}
+
+.rolePill {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.75rem 0.35rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all 0.2s ease;
+}
+
+.rolePill:hover {
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+.roleIconBox {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2563eb;
+}
+
+.roleName {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.careerPrepBanner {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 0.65rem 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.prepIconBox {
+  color: #16a34a;
+  flex-shrink: 0;
+}
+
+.prepTexts {
+  display: flex;
+  flex-direction: column;
+}
+
+.prepTitle {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #166534;
+}
+
+.prepDetails {
+  font-size: 0.75rem;
+  color: #475569;
+}
+
+/* =========================================
+   7. WHO SHOULD ENROLL? & PREREQUISITES
+   ========================================= */
+.enrollList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: 0.75rem;
+}
+
+.enrollItem {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.84rem;
+  color: #334155;
+  line-height: 1.35;
+}
+
+.prereqHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.75rem;
+}
+
+.prereqIconBlue {
+  color: #2563eb;
+}
+
+.prereqText {
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* =========================================
+   8. PRE-FOOTER CTA (Full Width Dark Banner)
+   ========================================= */
+.ctaBannerSection {
+  background: radial-gradient(circle at 50% 50%, #0d1b3e 0%, #050b18 100%);
+  padding: 2.25rem 0;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #1e293b;
+}
+
+.ctaBannerSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(1.5px 1.5px at 40px 60px, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1.5px 1.5px at 120px 140px, rgba(59, 130, 246, 0.5), transparent),
+    radial-gradient(1px 1px at 200px 40px, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(1.5px 1.5px at 300px 180px, rgba(59, 130, 246, 0.4), transparent),
+    radial-gradient(1.5px 1.5px at 450px 70px, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(1px 1px at 600px 150px, rgba(59, 130, 246, 0.3), transparent),
+    radial-gradient(1.5px 1.5px at 750px 50px, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1.5px 1.5px at 900px 130px, rgba(59, 130, 246, 0.5), transparent),
+    radial-gradient(1.5px 1.5px at 1050px 80px, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 1200px 160px, rgba(59, 130, 246, 0.3), transparent);
+  background-repeat: repeat;
+  background-size: 1200px 200px;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.ctaBannerContent {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.45rem;
+  letter-spacing: -0.02em;
+}
+
+.ctaSubtitle {
+  font-size: 0.88rem;
+  color: #cbd5e1;
+  margin-bottom: 1.25rem;
+}
+
+.ctaButtonsRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-bottom: 1.15rem;
+  flex-wrap: wrap;
+}
+
+.ctaBtnOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.6rem 1.35rem;
+  border-radius: 6px;
+  border: 1px solid #475569;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.ctaBtnOutline:hover {
+  border-color: #94a3b8;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.ctaContactRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 0.82rem;
+  color: #e2e8f0;
+  flex-wrap: wrap;
+}
+
+.contactItemLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contactItemLink:hover {
+  color: #60a5fa;
+}
+
+/* =========================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================= */
+@media (max-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .pillarsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .roadmapContainer {
+    flex-direction: column;
+  }
+  .roadmapSeparator {
+    transform: rotate(90deg);
+    padding: 0.35rem 0;
+  }
+  .techGrid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .scheduleGrid,
+  .twoColGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .batchesPillsRow {
+    grid-template-columns: 1fr;
+  }
+  .highlightsListGrid {
+    grid-template-columns: 1fr;
+  }
+  .careerRolesRow {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .techGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .pillarsGrid {
+    grid-template-columns: 1fr;
+  }
+  .heroTitle {
+    font-size: 1.85rem;
+  }
+  .techGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .careerRolesRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ctaButtonsRow {
+    flex-direction: column;
+    width: 100%;
+  }
+  .primaryBtnGreen,
+  .secondaryBtnOutline,
+  .ctaBtnOutline {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+  .heroSection {
+    padding: 1.25rem 0 1rem;
+  }
+  .pillarsSection,
+  .scheduleSection,
+  .curriculumSection,
+  .careerSection,
+  .techStackSection,
+  .ctaBannerSection {
+    padding: 1.25rem 0 1rem;
+  }
+}
+
