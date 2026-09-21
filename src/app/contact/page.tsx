@@ -382,7 +382,7 @@ export default function ContactPage() {
                 <div className={styles.socialIconsRow}>
                   {/* LinkedIn */}
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/company/advaitecs/posts/?feedView=all"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
@@ -393,22 +393,9 @@ export default function ContactPage() {
                     </svg>
                   </a>
 
-                  {/* YouTube */}
-                  <a
-                    href="https://youtube.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="YouTube"
-                    className={styles.socialIconBtn}
-                  >
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M21.58 7.19a2.5 2.5 0 0 0-1.76-1.77C18.26 5 12 5 12 5s-6.26 0-7.82.42c-.86.23-1.53.91-1.76 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.9 1.54 1.76 1.77C5.74 19 12 19 12 19s6.26 0 7.82-.42a2.5 2.5 0 0 0 1.76-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM9.75 15.02V8.98L15 12l-5.25 3.02z" />
-                    </svg>
-                  </a>
-
                   {/* Instagram */}
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/advaitecs?igsh=MTU5eXBzZGNrbXVrbg%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
@@ -423,7 +410,7 @@ export default function ContactPage() {
 
                   {/* Facebook */}
                   <a
-                    href="https://facebook.com"
+                    href="https://www.facebook.com/people/Advaitecs-Private-Limited/61584401930206/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Facebook"

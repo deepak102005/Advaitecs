@@ -600,14 +600,14 @@ export default function HomePage() {
                 <polyline points="7 7 17 7 17 17" />
               </svg>
             </Link>
-            <Link href="/contact" className={styles.ctaBtnGreen}>
+            <Link href="/Trainingprogarm" className={styles.ctaBtnGreen}>
               <span>Start a Training Program</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
               </svg>
             </Link>
-            <Link href="/contact" className={styles.ctaBtnPurple}>
+            <Link href="/workshop" className={styles.ctaBtnPurple}>
               <span>Schedule a Workshop</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
