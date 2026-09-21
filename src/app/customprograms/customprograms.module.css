@@ -1,0 +1,797 @@
+.pageWrapper {
+  width: 100%;
+  background-color: #ffffff;
+  color: #0f172a;
+  overflow-x: hidden;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+.pageWrapper ::selection {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* =========================================
+   COMMON SECTION HEADINGS
+   ========================================= */
+.sectionHeaderCenter {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 1.35rem;
+}
+
+.sectionTitle {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.sectionSubtitle {
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* =========================================
+   1. HERO SECTION
+   ========================================= */
+.heroSection {
+  padding: 1.75rem 0 1.5rem;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 1.75rem;
+  align-items: center;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.heroEyebrow {
+  color: #2563eb;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.45rem;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.75rem;
+}
+
+.heroTitleHighlight {
+  display: block;
+  color: #1e40af;
+}
+
+.heroDesc {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.55;
+  margin-bottom: 1.15rem;
+  max-width: 540px;
+}
+
+/* 3 Hero Badges Row */
+.heroBadgesRow {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.35rem;
+}
+
+.heroBadgeItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: #f0f7ff;
+  border: 1px solid #bfdbfe;
+  padding: 0.38rem 0.75rem;
+  border-radius: 6px;
+  color: #1e3a8a;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.heroBadgeIcon {
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hero Button Group */
+.heroButtonGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.primaryBtnGreen {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: #00a651;
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.62rem 1.35rem;
+  border-radius: 6px;
+  border: 1px solid #008f45;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.primaryBtnGreen:hover {
+  background-color: #008f45;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 166, 81, 0.25);
+}
+
+.secondaryBtnOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: #ffffff;
+  color: #1e3a8a;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.62rem 1.35rem;
+  border-radius: 6px;
+  border: 1.5px solid #1e3a8a;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.secondaryBtnOutline:hover {
+  background-color: #f0f7ff;
+  transform: translateY(-1px);
+}
+
+.heroMedia {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.heroImg {
+  width: 100%;
+  height: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* =========================================
+   2. CORE TRAINING AREAS (4 Cards)
+   ========================================= */
+.coreAreasSection {
+  padding: 1.75rem 0;
+  background-color: #ffffff;
+}
+
+.coreGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.15rem;
+}
+
+.coreCard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.5rem 1.15rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.25s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.coreCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.09);
+  border-color: #bfdbfe;
+}
+
+.coreIconCircle {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: #f0f7ff;
+  border: 1px solid #dbeafe;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.85rem;
+  transition: all 0.2s ease;
+}
+
+.coreCard:hover .coreIconCircle {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.coreTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 0.45rem;
+}
+
+.coreDesc {
+  font-size: 0.82rem;
+  color: #64748b;
+  line-height: 1.45;
+}
+
+/* =========================================
+   3. CUSTOMIZE EVERY PART (6 Cards)
+   ========================================= */
+.customizeSection {
+  padding: 1.75rem 0;
+  background-color: #ffffff;
+}
+
+.customizeGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.9rem;
+}
+
+.customizeCard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.25rem 0.75rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.25s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.customizeCard:hover {
+  transform: translateY(-2px);
+  border-color: #93c5fd;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.08);
+}
+
+.customizeIconCircle {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background-color: #f0f7ff;
+  border: 1px solid #dbeafe;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.customizeCard:hover .customizeIconCircle {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.customizeTitle {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 0.35rem;
+}
+
+.customizeDesc {
+  font-size: 0.76rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* =========================================
+   4. FIVE-STEP PROCESS (5 Steps Horizontal)
+   ========================================= */
+.processSection {
+  padding: 1.75rem 0;
+  background-color: #ffffff;
+}
+
+.processContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.processCard {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.15rem 0.85rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 160px;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.processCard:hover {
+  border-color: #93c5fd;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.08);
+}
+
+.processHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.processStepNumber {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #2563eb;
+  line-height: 1;
+}
+
+.processStepTitle {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #1e3a8a;
+}
+
+.processIconWrapper {
+  color: #2563eb;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.processDesc {
+  font-size: 0.78rem;
+  color: #64748b;
+  line-height: 1.35;
+}
+
+.processArrow {
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0 0.2rem;
+}
+
+/* =========================================
+   5. FLEXIBLE DELIVERY OPTIONS (4 Cards)
+   ========================================= */
+.deliverySection {
+  padding: 1.75rem 0;
+  background-color: #ffffff;
+}
+
+.deliveryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.15rem;
+}
+
+.deliveryCard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.4rem 1.15rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.25s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.deliveryCard:hover {
+  transform: translateY(-2px);
+  border-color: #93c5fd;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.08);
+}
+
+.deliveryIconWrapper {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  background-color: #f0f7ff;
+  border: 1px solid #dbeafe;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.deliveryCard:hover .deliveryIconWrapper {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.deliveryTitle {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 0.4rem;
+}
+
+.deliveryDesc {
+  font-size: 0.82rem;
+  color: #64748b;
+  line-height: 1.45;
+}
+
+/* =========================================
+   6. ENTERPRISE & COLLEGE COMPARISON CARDS
+   ========================================= */
+.comparisonSection {
+  padding: 1.75rem 0;
+  background-color: #ffffff;
+}
+
+.comparisonGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.enterpriseCard {
+  background: #ffffff;
+  border: 1.5px solid #38bdf8;
+  border-radius: 12px;
+  padding: 1.5rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(56, 189, 248, 0.08);
+  transition: all 0.25s ease;
+}
+
+.enterpriseCard:hover {
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.16);
+}
+
+.collegeCard {
+  background: #ffffff;
+  border: 1.5px solid #4ade80;
+  border-radius: 12px;
+  padding: 1.5rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(74, 222, 128, 0.08);
+  transition: all 0.25s ease;
+}
+
+.collegeCard:hover {
+  box-shadow: 0 6px 20px rgba(74, 222, 128, 0.16);
+}
+
+.cardHeader {
+  margin-bottom: 1.15rem;
+}
+
+.cardTitle {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 0.35rem;
+}
+
+.cardSubtitle {
+  font-size: 0.85rem;
+  color: #475569;
+  line-height: 1.4;
+}
+
+.cardBody {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.checkItem {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.checkIcon {
+  color: #10b981;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardGraphicCol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buildingIllustration {
+  width: 100%;
+  max-width: 170px;
+  height: auto;
+  display: block;
+}
+
+/* =========================================
+   7. PRE-FOOTER CTA BANNER
+   ========================================= */
+.ctaBannerSection {
+  padding: 1.25rem 0 2rem;
+}
+
+.ctaBanner {
+  background: radial-gradient(circle at 50% 30%, #0d2868 0%, #08193f 60%, #05102a 100%);
+  border-radius: 12px;
+  padding: 2.25rem 1.5rem 1.75rem;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(8, 25, 63, 0.25);
+}
+
+.ctaBgPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(59, 130, 246, 0.2) 0%, transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(56, 189, 248, 0.2) 0%, transparent 40%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+  pointer-events: none;
+}
+
+.ctaTitle {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.45rem;
+  position: relative;
+  z-index: 1;
+}
+
+.ctaSubtitle {
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  margin-bottom: 1.4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.ctaButtonsRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.35rem;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+.ctaBtnGreen {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: #00a651;
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.62rem 1.4rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid #008f45;
+}
+
+.ctaBtnGreen:hover {
+  background-color: #008f45;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 166, 81, 0.35);
+}
+
+.ctaBtnBlueOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: #0a2558;
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.62rem 1.4rem;
+  border-radius: 6px;
+  border: 1px solid #3b82f6;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.ctaBtnBlueOutline:hover {
+  background-color: #1e3a8a;
+  transform: translateY(-1px);
+  border-color: #60a5fa;
+}
+
+.ctaContactInfoRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem;
+  color: #e2e8f0;
+  font-size: 0.84rem;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+.ctaContactItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.ctaContactItem:hover {
+  color: #38bdf8;
+}
+
+/* =========================================
+   RESPONSIVE BREAKPOINTS
+   ========================================= */
+@media (max-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+
+  .coreGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .customizeGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .deliveryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 1.85rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.45rem;
+  }
+
+  .processContainer {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .processArrow {
+    transform: rotate(90deg);
+    padding: 0.25rem 0;
+  }
+
+  .processCard {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .comparisonGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cardBody {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .cardGraphicCol {
+    display: none;
+  }
+
+  .customizeGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 1.6rem;
+  }
+
+  .coreGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .customizeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .deliveryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroButtonGroup {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ctaButtonsRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

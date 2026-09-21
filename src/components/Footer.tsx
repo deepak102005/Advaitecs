@@ -95,7 +95,7 @@ export default function Footer() {
               <li><Link href="/Aboutus" className={styles.footerLink}>About Us</Link></li>
               <li><Link href="/careers" className={styles.footerLink}>Careers</Link></li>
               <li><Link href="/contact" className={styles.footerLink}>Contact Us</Link></li>
-              <li><Link href="/contact" className={styles.footerLink}>Privacy Policy</Link></li>
+              <li><Link href="/privacypolicy" className={styles.footerLink}>Privacy Policy</Link></li>
             </ul>
           </div>
 
@@ -116,7 +116,7 @@ export default function Footer() {
               <li><Link href="/fullstack" className={styles.footerLink}>Full-Stack Job Ready</Link></li>
               <li><Link href="/AICAREER" className={styles.footerLink}>AI Career Ready</Link></li>
               <li><Link href="/Trainingprogarm" className={styles.footerLink}>All Programs</Link></li>
-              <li><Link href="/corporatetraining" className={styles.footerLink}>Custom Programs</Link></li>
+              <li><Link href="/customprograms" className={styles.footerLink}>Custom Programs</Link></li>
             </ul>
           </div>
 

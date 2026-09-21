@@ -44,7 +44,7 @@ export default function Header() {
   const trainingItems: NavDropdownItem[] = [
     { label: 'Full Stack Developer', href: '/fullstack' },
     { label: 'AI Career Ready', href: '/AICAREER' },
-    { label: 'Custom Programs', href: '/corporatetraining' },
+    { label: 'Custom Programs', href: '/customprograms' },
   ];
 
   const workshopItems: NavDropdownItem[] = [

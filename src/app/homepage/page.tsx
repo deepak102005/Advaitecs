@@ -23,21 +23,6 @@ export default function HomePage() {
                 Transforming education and workforce development through AI-powered technology,
                 hands-on training and industry-focused learning experiences.
               </p>
-              <div className={styles.heroButtonGroup}>
-                <Link href="/solutions" className={styles.primaryBtn}>
-                  <span>Explore Our Solutions</span>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
-                  </svg>
-                </Link>
-                <Link href="/contact" className={styles.secondaryBtn}>
-                  <span>Talk to Us</span>
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                  </svg>
-                </Link>
-              </div>
             </div>
 
             <div className={styles.heroMedia}>
@@ -93,7 +78,7 @@ export default function HomePage() {
               <p className={styles.cardDesc}>
                 Industry-aligned, hands-on programs designed to build in-demand technical skills and real-world expertise.
               </p>
-              <Link href="/training/full-stack" className={`${styles.cardActionLink} ${styles.linkGreen}`}>
+              <Link href="/Trainingprogarm" className={`${styles.cardActionLink} ${styles.linkGreen}`}>
                 <span>View Programs</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="5" y1="12" x2="19" y2="12" />
@@ -356,7 +341,7 @@ export default function HomePage() {
                   <strong>Outcome:</strong> Build a production-ready web application from requirements through deployment.
                 </p>
 
-                <Link href="/training/full-stack" className={styles.courseLink}>
+                <Link href="/fullstack" className={styles.courseLink}>
                   <span>Learn More</span>
                   <span>→</span>
                 </Link>
@@ -424,7 +409,7 @@ export default function HomePage() {
 
             {/* Centered CTA button */}
             <div className={styles.centerBtnWrapper}>
-              <Link href="/training/full-stack" className={styles.primaryBtn}>
+              <Link href="/Trainingprogarm" className={styles.primaryBtn}>
                 <span>View All Training Programs</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="5" y1="12" x2="19" y2="12" />
@@ -581,7 +566,7 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <Link href="/workshop" className={`${styles.splitActionLink} ${styles.linkBlue}`}>
+                <Link href="/collegeenterpriseworkshop" className={`${styles.splitActionLink} ${styles.linkBlue}`}>
                   <span>Schedule an Enterprise Workshop</span>
                   <span className={styles.linkArrow}>→</span>
                 </Link>
@@ -617,14 +602,14 @@ export default function HomePage() {
                 <polyline points="7 7 17 7 17 17" />
               </svg>
             </Link>
-            <Link href="/training/full-stack" className={styles.ctaBtnGreen}>
-              <span>Start a Training Programs</span>
+            <Link href="/contact" className={styles.ctaBtnGreen}>
+              <span>Start a Training Program</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12" />
                 <polyline points="12 5 19 12 12 19" />
               </svg>
             </Link>
-            <Link href="/workshop" className={styles.ctaBtnPurple}>
+            <Link href="/contact" className={styles.ctaBtnPurple}>
               <span>Schedule a Workshop</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
