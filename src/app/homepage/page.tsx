@@ -138,7 +138,7 @@ export default function HomePage() {
                     <polyline points="7 7 17 7 17 17" />
                   </svg>
                 </Link>
-                <Link href="/Skaimitra/request-demo" className={styles.secondaryBtn}>
+                <Link href="/contact" className={styles.secondaryBtn}>
                   <span>Request a Demo</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
@@ -156,25 +156,23 @@ export default function HomePage() {
 
             {/* Right Side 2x3 Grid */}
             <div className={styles.featuresGrid}>
-              {/* 1 */}
+              {/* 1: Curriculum & Lesson Planning */}
               <div className={styles.featureItem}>
                 <div className={styles.featureIconWrapper}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72Z" />
-                    <path d="m14 7 3 3" />
-                    <path d="M5 6v4" />
-                    <path d="M19 14v4" />
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
                   </svg>
                 </div>
                 <div className={styles.featureText}>
-                  <h3 className={styles.featureTitle}>AI Teaching Assistant</h3>
+                  <h3 className={styles.featureTitle}>Curriculum &amp; Lesson Planning</h3>
                   <p className={styles.featureDesc}>
-                    Lesson plans, assessments, practice activities and teaching resources.
+                    Access CBSE/ICSE-aligned content, lesson plans and customizable resources.
                   </p>
                 </div>
               </div>
 
-              {/* 2 */}
+              {/* 2: Assignments & Assessments */}
               <div className={styles.featureItem}>
                 <div className={styles.featureIconWrapper}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -192,23 +190,23 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* 3 */}
+              {/* 3: Skill Education in AI and Coding */}
               <div className={styles.featureItem}>
                 <div className={styles.featureIconWrapper}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                    <rect x="3" y="4" width="18" height="12" rx="2" />
+                    <line x1="2" y1="20" x2="22" y2="20" />
                   </svg>
                 </div>
                 <div className={styles.featureText}>
-                  <h3 className={styles.featureTitle}>Learning &amp; Study Materials</h3>
+                  <h3 className={styles.featureTitle}>Skill Education in AI and Coding</h3>
                   <p className={styles.featureDesc}>
-                    Centralized access to curriculum-aligned learning resources anytime.
+                    Hands-on learning in AI, coding and emerging technologies for future-ready students.
                   </p>
                 </div>
               </div>
 
-              {/* 4 */}
+              {/* 4: SkaiAssistant */}
               <div className={styles.featureItem}>
                 <div className={styles.featureIconWrapper}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -227,7 +225,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* 5 */}
+              {/* 5: Student Progress Insights */}
               <div className={styles.featureItem}>
                 <div className={styles.featureIconWrapper}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -244,7 +242,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* 6 */}
+              {/* 6: Communication & Engagement */}
               <div className={styles.featureItem}>
                 <div className={styles.featureIconWrapper}>
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

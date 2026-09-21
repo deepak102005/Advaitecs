@@ -971,6 +971,10 @@
   .secondaryBtn {
     width: 100%;
     justify-content: center;
+    white-space: normal;
+    text-align: center;
+    box-sizing: border-box;
+    max-width: 100%;
   }
 
   .platformTitle {
@@ -1000,6 +1004,10 @@
   .ctaBtnPurple {
     width: 100%;
     justify-content: center;
+    white-space: normal;
+    text-align: center;
+    box-sizing: border-box;
+    max-width: 100%;
   }
 }
 
