@@ -235,13 +235,16 @@ export default function ContactPage() {
                   {/* Row 2: Phone Number & Inquiry Type */}
                   <div className={styles.formRow}>
                     <div className={styles.formGroup}>
-                      <label className={styles.formLabel}>Phone Number</label>
+                      <label className={styles.formLabel}>
+                        Phone Number <span className={styles.requiredAsterisk}>*</span>
+                      </label>
                       <input
                         type="tel"
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
                         placeholder="Enter your phone number"
+                        required
                         className={styles.formInput}
                       />
                     </div>
@@ -260,6 +263,7 @@ export default function ContactPage() {
                         <option value="">Select an option</option>
                         <option value="training">Training Programs</option>
                         <option value="skaimitra">SkaiMitra for Schools</option>
+                        <option value="skaimitra-demo">Request for SkaiMitra Demo</option>
                         <option value="workshops">Workshops &amp; Corporate Training</option>
                         <option value="partnerships">Partnerships &amp; Collaborations</option>
                         <option value="general">General Inquiry</option>
@@ -546,77 +550,28 @@ export default function ContactPage() {
               </p>
 
               <div className={styles.mapContainer}>
-                {/* SVG Visual Map of Vijayawada Area */}
-                <svg className={styles.mapSvgWrapper} viewBox="0 0 500 280" preserveAspectRatio="xMidYMid slice">
-                  {/* Background map land */}
-                  <rect width="500" height="280" fill="#f4f3f0" />
-
-                  {/* Krishna River with curve */}
-                  <path
-                    d="M-20 180 Q100 230 220 270 L240 300 L-20 300 Z"
-                    fill="#aadaff"
-                  />
-                  <path
-                    d="M-20 160 Q120 210 240 285 L-20 285 Z"
-                    fill="#90caff"
-                    opacity="0.6"
-                  />
-                  <text x="100" y="240" fill="#3b82f6" fontSize="12" fontStyle="italic" fontWeight="500" transform="rotate(18, 100, 240)">
-                    Krishna River
-                  </text>
-
-                  {/* Roads network */}
-                  {/* Main highway */}
-                  <path d="M-10 100 L510 120" stroke="#ffffff" strokeWidth="9" />
-                  <path d="M-10 100 L510 120" stroke="#fcd34d" strokeWidth="4" />
-
-                  {/* Secondary roads */}
-                  <path d="M80 -10 L140 280" stroke="#ffffff" strokeWidth="6" />
-                  <path d="M220 -10 L200 280" stroke="#ffffff" strokeWidth="6" />
-                  <path d="M350 -10 L370 280" stroke="#ffffff" strokeWidth="6" />
-                  <path d="M40 40 L450 70" stroke="#ffffff" strokeWidth="5" />
-                  <path d="M120 180 L480 200" stroke="#ffffff" strokeWidth="5" />
-                  <path d="M180 80 Q260 140 340 160" stroke="#e2e8f0" strokeWidth="3" />
-
-                  {/* Route 305 Badge */}
-                  <rect x="420" y="145" width="22" height="14" rx="3" fill="#f59e0b" />
-                  <text x="431" y="156" fill="#ffffff" fontSize="9" fontWeight="bold" textAnchor="middle">305</text>
-
-                  {/* Area Labels */}
-                  <text x="140" y="55" fill="#334155" fontSize="15" fontWeight="700">Vijayawada</text>
-                  <text x="120" y="75" fill="#64748b" fontSize="12" fontWeight="600">Vijayawada</text>
-                  <text x="210" y="185" fill="#64748b" fontSize="10" fontWeight="600" letterSpacing="0.05em">GOVERNORPET</text>
-                  <text x="330" y="225" fill="#475569" fontSize="10" fontWeight="600">BENZ CIRCLE</text>
-                  <text x="380" y="130" fill="#475569" fontSize="10" fontWeight="600">KANURU</text>
-                </svg>
-
-                {/* Prominent Red Pin Marker */}
-                <a
-                  href="https://maps.google.com/?q=Vijayawada+Andhra+Pradesh"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.mapPinMarker}
-                  title="Open in Google Maps"
-                >
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="#dc2626">
-                    <path d="M12 0C7.58 0 4 3.58 4 8c0 5.25 8 16 8 16s8-10.75 8-16c0-4.42-3.58-8-8-8zm0 11c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z" />
-                  </svg>
-                  <div className={styles.mapPinBadge}>
-                    <div>Advaitecs Private Limited</div>
-                    <div style={{ color: '#64748b', fontSize: '0.68rem', fontWeight: 500 }}>Vijayawada</div>
-                  </div>
-                </a>
-
-                {/* Map UI Controls */}
-                <div className={styles.mapZoomControls}>
-                  <button type="button" className={styles.mapZoomBtn} aria-label="Zoom in">+</button>
-                  <button type="button" className={styles.mapZoomBtn} aria-label="Zoom out">&minus;</button>
-                </div>
-
-                <div className={styles.googleLogoBadge}>
-                  Google
-                </div>
+                <iframe
+                  src="https://www.google.com/maps?ll=16.503714,80.718138&amp;z=18&amp;t=m&amp;hl=en&amp;gl=IN&amp;mapclient=embed&amp;cid=9119766196065096535&amp;output=embed"
+                  className={styles.mapIframe}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Advaitecs Private Limited Office Location"
+                />
               </div>
+
+              <a
+                href="https://www.google.com/maps?ll=16.503714,80.718138&amp;z=18&amp;t=m&amp;hl=en&amp;gl=IN&amp;mapclient=embed&amp;cid=9119766196065096535"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.mapDirectionsLink}
+              >
+                <span>View on Google Maps &amp; Get Directions</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7" />
+                  <polyline points="7 7 17 7 17 17" />
+                </svg>
+              </a>
             </div>
 
             {/* Right Card: Frequently Asked Questions */}

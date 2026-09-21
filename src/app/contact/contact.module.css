@@ -509,88 +509,40 @@
   margin-bottom: 1rem;
 }
 
-/* Map Recreation */
+/* Live Google Maps */
 .mapContainer {
   position: relative;
   width: 100%;
-  height: 260px;
+  height: 270px;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid #cbd5e1;
   background-color: #f1ede6;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
-.mapSvgWrapper {
+.mapIframe {
   width: 100%;
   height: 100%;
+  border: 0;
   display: block;
 }
 
-.mapPinMarker {
-  position: absolute;
-  top: 45%;
-  left: 38%;
-  transform: translate(-50%, -100%);
-  display: flex;
+.mapDirectionsLink {
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  cursor: pointer;
-  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.25));
+  gap: 0.4rem;
+  margin-top: 0.65rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+  transition: all 0.2s ease;
 }
 
-.mapPinBadge {
-  background-color: #ffffff;
-  padding: 0.35rem 0.65rem;
-  border-radius: 6px;
-  border: 1px solid #cbd5e1;
-  font-size: 0.74rem;
-  font-weight: 700;
-  color: #0f172a;
-  line-height: 1.2;
-  white-space: nowrap;
-}
-
-.mapZoomControls {
-  position: absolute;
-  right: 12px;
-  bottom: 12px;
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
-  border-radius: 4px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-}
-
-.mapZoomBtn {
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #475569;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
-
-.mapZoomBtn:first-child {
-  border-bottom: 1px solid #e2e8f0;
-}
-
-.mapZoomBtn:hover {
-  background-color: #f8fafc;
-}
-
-.googleLogoBadge {
-  position: absolute;
-  left: 8px;
-  bottom: 6px;
-  font-size: 0.72rem;
-  font-weight: 700;
-  color: #64748b;
+.mapDirectionsLink:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
 }
 
 /* FAQ Accordion */
